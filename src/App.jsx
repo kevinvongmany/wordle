@@ -8,8 +8,12 @@ import { useEffect, useState } from "react";
 import { boardDefault, generateWordSet } from "./Words";
 import AppContext from "./AppContext";
 import BogNoted from "./assets/bogNoted.gif";
+import { useAlert } from "react-alert";
 
 function App() {
+  
+  const alert = useAlert();
+
   const [board, setBoard] = useState(boardDefault);
   const [currentAttempt, setCurrentAttempt] = useState({
     attempt: 0,
@@ -69,7 +73,7 @@ function App() {
         letterPosition: 0,
       });
     } else {
-      alert("Invalid word");
+      alert.show("Invalid word");
     }
 
     if (currentAttempt.attempt === 5) {
