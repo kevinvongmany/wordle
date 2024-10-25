@@ -5,6 +5,7 @@ import GameOver from "./components/GameOver";
 import { useEffect, useState } from "react";
 import { boardDefault, generateWordSet } from "./Words";
 import AppContext from "./AppContext";
+import BogNoted from "./assets/bogNoted.gif";
 
 function App() {
   const [board, setBoard] = useState(boardDefault);
@@ -19,7 +20,7 @@ function App() {
     guessedWord: false,
   });
 
-  const targetWord = "CRANE";
+  const targetWord = "WORDL";
 
   useEffect(() => {
     generateWordSet().then((words) => {
@@ -78,8 +79,9 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <h1>Wordle</h1>
+        <h1>Bogdle</h1>
       </nav>
+      <img src={BogNoted} alt="Bog Noted" />
       <AppContext.Provider
         value={{ 
           board, 

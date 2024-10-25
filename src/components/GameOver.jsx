@@ -10,6 +10,7 @@ function GameOver() {
         {gameOver.guessedWord && (
             <h2>It took you {currentAttempt.attempt} attempt{currentAttempt.attempt > 1 && "s"} to guess the word</h2>
         )}
+        <h2><a href="https://www.twitch.tv/bogonmydog/clip/DeliciousBoxyCockroachCharlietheUnicorn-4R9RPx5apgHUl7Du" target='_blank'>WORDL</a></h2>
     </div>
   )
 }
