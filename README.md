@@ -13,11 +13,11 @@ This project is a naive implementation of [Wordle](https://www.nytimes.com/games
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/react-wordle.git
+    git clone https://github.com/kevinvongmany/wordle.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd react-wordle
+    cd wordle
     ```
 3. Install dependencies:
     ```bash
