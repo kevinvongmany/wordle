@@ -1,7 +1,9 @@
 import "./App.css";
+import "./index.css";
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
+import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import { boardDefault, generateWordSet } from "./Words";
 import AppContext from "./AppContext";
@@ -81,7 +83,9 @@ function App() {
       <nav>
         <h1>Bogdle</h1>
       </nav>
-      <img src={BogNoted} alt="Bog Noted" />
+      <div className="mt-4 flex justify-center">
+        <img src={BogNoted} alt="Bog Noted" className="flex items-center" />
+      </div>
       <AppContext.Provider
         value={{ 
           board, 
@@ -102,6 +106,7 @@ function App() {
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
         </div>
       </AppContext.Provider>
+      <Footer />
     </div>
   );
 }
