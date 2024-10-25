@@ -59,6 +59,7 @@ function App() {
       setGameOver({gameOver: true, guessedWord: true});
     }
     console.log(currWord);
+    console.log(wordSet);
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrentAttempt({
         attempt: currentAttempt.attempt + 1,
