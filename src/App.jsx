@@ -80,6 +80,7 @@ function App() {
       });
     } else {
       toast.warning("Word not found in dictionary");
+      return;
     }
 
     if (currentAttempt.attempt === 5) {
@@ -95,7 +96,7 @@ function App() {
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
-          <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-[100px] md:w-[120px]" />
+          <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
         </div>
         <AppContext.Provider
           value={{ 

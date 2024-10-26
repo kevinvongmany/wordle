@@ -24,7 +24,7 @@ function Keyboard() {
     }
   }, [handleKeyboard])
   return (
-    <div className='mt-2 md:mt-3 lg:mt-12 w-full h-full' onKeyDown={handleKeyboard}>
+    <div className='mt-6 md:mt-12 lg:mt-12 w-full h-full' onKeyDown={handleKeyboard}>
         <div className='flex row justify-center items-center mb-1'>
             {keys1.map((key, i) => (
                 <Key key={i} keyValue={key} used={usedLetters.includes(key)} />

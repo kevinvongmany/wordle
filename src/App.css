@@ -97,7 +97,11 @@ body {
 } */
 
 #large {
-  width: 100px;
+  width: 4rem;
+  @media screen and (min-width: 768px) {
+    width: 8rem;
+    
+  }
 }
 #disabled {
   background-color: #3a393c;
