@@ -24,7 +24,7 @@ function Keyboard() {
     }
   }, [handleKeyboard])
   return (
-    <div className='keyboard' onKeyDown={handleKeyboard}>
+    <div className='mt-2 md:mt-3 lg:mt-12 w-full h-full sm:w-9/12 sm:h-9/12' onKeyDown={handleKeyboard}>
         <div className='line1'>
             {keys1.map((key, i) => (
                 <Key key={i} keyValue={key} used={usedLetters.includes(key)} />

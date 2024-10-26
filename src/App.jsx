@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { boardDefault, generateWordSet } from "./Words";
 import AppContext from "./AppContext";
 import BogNoted from "./assets/bogNoted.gif";
-import { Alert } from "@material-tailwind/react";
 
 
 function App() {
@@ -83,33 +82,35 @@ function App() {
 
   };
   return (
-    <div className="App">
-      <nav>
-        <h1>Bogdle</h1>
+    <div className="flex flex-col bg-gray-900 text-white w-full">
+      <nav className="fixed top-0 flex p-4 bg-gray-800 w-full text-center justify-center items-center">
+        <h1 className="text-center text-3xl font-bold">Bogdle</h1>
       </nav>
-      <div className="mt-4 flex justify-center">
-        <img src={BogNoted} alt="Bog Noted" className="flex items-center" />
-      </div>
-      <AppContext.Provider
-        value={{ 
-          board, 
-          setBoard, 
-          currentAttempt, 
-          setCurrentAttempt,
-          onSelectLetter,
-          onDelete,
-          onEnter,
-          usedLetters,
-          setUsedLetters,
-          targetWord,
-          gameOver
-        }}
-      >
-        <div className="game">
-          <Board />
-          {gameOver.gameOver ? <GameOver /> : <Keyboard />}
+      <div className="min-h-screen p-12 pb-12">
+        <div className="mt-4 flex justify-center">
+          <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-[100px] md:w-[120px]" />
         </div>
-      </AppContext.Provider>
+        <AppContext.Provider
+          value={{ 
+            board, 
+            setBoard, 
+            currentAttempt, 
+            setCurrentAttempt,
+            onSelectLetter,
+            onDelete,
+            onEnter,
+            usedLetters,
+            setUsedLetters,
+            targetWord,
+            gameOver
+          }}
+        >
+          <div className="flex flex-col items-center mb-4 pb-">
+            <Board />
+            {gameOver.gameOver ? <GameOver /> : <Keyboard />}
+          </div>
+        </AppContext.Provider>
+      </div>
       <Footer />
     </div>
   );

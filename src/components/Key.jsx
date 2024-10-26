@@ -15,7 +15,7 @@ function Key({ keyValue, isLarge, used }) {
   };
   return (
     <div 
-    className="key" 
+    className="w-9 h-12 m:w-12 m:h-16 m-0.5 md:m-1.5 rounded grid place-items-center text-sm md:text-lg bg-gray-500 text-white font-sans cursor-pointer" 
     id={isLarge ? "large" : used && "disabled"} 
     onClick={selectletter}>
       {keyValue}

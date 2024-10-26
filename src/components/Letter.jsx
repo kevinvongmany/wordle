@@ -2,20 +2,29 @@ import { useContext, useEffect } from "react";
 import AppContext from "../AppContext";
 
 function Letter({ letterPosition, attemptValue }) {
-  const { board, targetWord, currentAttempt, setUsedLetters } = useContext(AppContext);
+  const { board, targetWord, currentAttempt, setUsedLetters } =
+    useContext(AppContext);
   const letter = board[attemptValue][letterPosition];
   const correct = targetWord[letterPosition] === letter;
-  const almost = !correct && letter !== '' && targetWord.includes(letter);
-  const letterState = currentAttempt.attempt > attemptValue && (correct ? "correct" : almost ? "almost" : "incorrect");
-  
+  const almost = !correct && letter !== "" && targetWord.includes(letter);
+  const letterState =
+    currentAttempt.attempt > attemptValue &&
+    (correct ? "correct" : almost ? "almost" : "error");
+
   useEffect(() => {
     if (letter && !correct && !almost) {
       setUsedLetters((prev) => [...prev, letter]);
     }
-
   }, [currentAttempt.attempt]);
 
-  return <div className="letter" id={letterState}>{letter}</div>;
+  return (
+    <div
+      className="p-3 md:p-4 border border-grey-500 rounded-lg text-center m-1 w-[120px] h-[50px] md:h-[70px] place-items-center text-lg md:text-2xl font-bold text-white font-sans"
+      id={letterState}
+    >
+      {letter}
+    </div>
+  );
 }
 
 export default Letter;
