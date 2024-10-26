@@ -19,7 +19,7 @@ function Letter({ letterPosition, attemptValue }) {
 
   return (
     <div
-      className="p-3 md:p-4 border border-grey-500 rounded-lg text-center m-1 w-[120px] h-[50px] md:h-[70px] place-items-center text-lg md:text-2xl font-bold text-white font-sans"
+      className="p-1 md:p-2 border border-grey-500 rounded-lg text-center m-1 w-12 md:w-24 h-12 text-lg md:text-2xl font-bold text-white font-sans"
       id={letterState}
     >
       {letter}

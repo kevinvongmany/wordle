@@ -1,15 +1,19 @@
 import "./App.css";
 import "./index.css";
+import { useEffect, useState } from "react";
+
+import AppContext from "./AppContext";
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { boardDefault, generateWordSet } from "./Words";
+import BogNoted from "./assets/bogNoted.gif";
+
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
-import { boardDefault, generateWordSet } from "./Words";
-import AppContext from "./AppContext";
-import BogNoted from "./assets/bogNoted.gif";
-
-
 function App() {
   
 
@@ -55,7 +59,10 @@ function App() {
   };
 
   const onEnter = () => {
-    if (currentAttempt.letterPosition !== 5) return;
+    if (currentAttempt.letterPosition !== 5) {
+      toast.warning("Please enter 5 letters");
+      return;
+    };
 
     let currWord = "";
     for (let i = 0; i < 5; i++) {
@@ -72,7 +79,7 @@ function App() {
         letterPosition: 0,
       });
     } else {
-      alert("Invalid word");
+      toast.warning("Word not found in dictionary");
     }
 
     if (currentAttempt.attempt === 5) {
@@ -83,10 +90,10 @@ function App() {
   };
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
-      <nav className="fixed top-0 flex p-4 bg-gray-800 w-full text-center justify-center items-center">
+      <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
         <h1 className="text-center text-3xl font-bold">Bogdle</h1>
       </nav>
-      <div className="min-h-screen p-12 pb-12">
+      <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
           <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-[100px] md:w-[120px]" />
         </div>
@@ -111,6 +118,18 @@ function App() {
           </div>
         </AppContext.Provider>
       </div>
+      <ToastContainer 
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <Footer />
     </div>
   );

@@ -24,18 +24,18 @@ function Keyboard() {
     }
   }, [handleKeyboard])
   return (
-    <div className='mt-2 md:mt-3 lg:mt-12 w-full h-full sm:w-9/12 sm:h-9/12' onKeyDown={handleKeyboard}>
-        <div className='line1'>
+    <div className='mt-2 md:mt-3 lg:mt-12 w-full h-full' onKeyDown={handleKeyboard}>
+        <div className='flex row justify-center items-center mb-1'>
             {keys1.map((key, i) => (
                 <Key key={i} keyValue={key} used={usedLetters.includes(key)} />
             ))}
         </div>
-        <div className='line2'>
+        <div className='flex row justify-center items-center mb-1'>
             {keys2.map((key, i) => (
                 <Key key={i} keyValue={key} used={usedLetters.includes(key)} />
             ))}
         </div>
-        <div className='line3'>
+        <div className='flex row justify-center items-center mb-1'>
             <Key keyValue={"ENTER"} isLarge />
             {keys3.map((key, i) => (
                 <Key key={i} keyValue={key} used={usedLetters.includes(key)} />
