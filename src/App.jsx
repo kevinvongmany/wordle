@@ -29,7 +29,7 @@ function App() {
     guessedWord: false,
   });
 
-  const targetWord = "WORDL";
+  const targetWord = "MYNUT";
 
   useEffect(() => {
     generateWordSet().then((words) => {
