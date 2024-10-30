@@ -28,14 +28,17 @@ function App() {
     gameOver: false,
     guessedWord: false,
   });
-
+  
   const targetWord = "RYANO";
+  const [solutionArray, setSolutionArray] = useState([]);
+  const [guessedWords, setGuessedWords] = useState([]);
 
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
     }
   );
+  setSolutionArray(Array.from(targetWord).map((letter) => letter.toUpperCase()));
   }, []);
 
   const onSelectLetter = (keyValue) => {
@@ -71,15 +74,14 @@ function App() {
     if (currWord === targetWord) {
       setGameOver({gameOver: true, guessedWord: true});
     }
-    console.log(currWord);
-    console.log(wordSet);
-    if (wordSet.has(currWord.toLowerCase())) {
+    if (wordSet.has(currWord.toLowerCase()) && !guessedWords.includes(currWord)) {
+      setGuessedWords([...guessedWords, currWord]);
       setCurrentAttempt({
         attempt: currentAttempt.attempt + 1,
         letterPosition: 0,
       });
     } else {
-      toast.warning("Word not found in dictionary");
+      toast.warning(guessedWords.includes(currWord) ? "Word already guessed." : "Word not found in dictionary");
       return;
     }
 
@@ -109,6 +111,8 @@ function App() {
             onEnter,
             usedLetters,
             setUsedLetters,
+            solutionArray,
+            setSolutionArray,
             targetWord,
             gameOver
           }}
