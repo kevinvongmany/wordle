@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { boardDefault, generateWordSet } from "./Words";
+import { createBoard, generateWordSet } from "./Words";
 import BogNoted from "./assets/bogNoted.gif";
 
 import Board from "./components/Board";
@@ -16,8 +16,11 @@ import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 function App() {
   
+  const targetWord = "RYANO";
+  const letterCol = targetWord.length;
+  const wordRows = letterCol < 6 ? 6 : letterCol + 1;
 
-  const [board, setBoard] = useState(boardDefault);
+  const [board, setBoard] = useState(createBoard(wordRows, letterCol));
   const [currentAttempt, setCurrentAttempt] = useState({
     attempt: 0,
     letterPosition: 0,
@@ -29,20 +32,18 @@ function App() {
     guessedWord: false,
   });
   
-  const targetWord = "RYANO";
   const [solutionArray, setSolutionArray] = useState([]);
   const [guessedWords, setGuessedWords] = useState([]);
 
   useEffect(() => {
-    generateWordSet().then((words) => {
-      setWordSet(words.wordSet);
-    }
-  );
-  setSolutionArray(Array.from(targetWord).map((letter) => letter.toUpperCase()));
+    const words = generateWordSet(targetWord.length);
+    setWordSet(words);
+    
+    setSolutionArray(Array.from(targetWord).map((letter) => letter.toUpperCase()));
   }, []);
 
   const onSelectLetter = (keyValue) => {
-    if (currentAttempt.letterPosition === 5) return;
+    if (currentAttempt.letterPosition === letterCol) return;
     board[currentAttempt.attempt][currentAttempt.letterPosition] = keyValue;
     setCurrentAttempt({
       ...currentAttempt,
@@ -62,13 +63,13 @@ function App() {
   };
 
   const onEnter = () => {
-    if (currentAttempt.letterPosition !== 5) {
-      toast.warning("Please enter 5 letters");
+    if (currentAttempt.letterPosition !== letterCol) {
+      toast.warning(`Please enter ${letterCol} letters`);
       return;
     };
 
     let currWord = "";
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < letterCol; i++) {
       currWord += board[currentAttempt.attempt][i];
     }
     if (currWord === targetWord) {
@@ -85,7 +86,7 @@ function App() {
       return;
     }
 
-    if (currentAttempt.attempt === 5 && currWord !== targetWord) { // for some reason the last guess always counts as a failure, win or lose
+    if (currentAttempt.attempt === wordRows - 1 && currWord !== targetWord) { // for some reason the last guess always counts as a failure, win or lose
       setGameOver({gameOver: true, guessedWord: false});
     }
 
