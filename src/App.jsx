@@ -16,7 +16,7 @@ import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 function App() {
   
-  const targetWord = "RYANO";
+  const targetWord = "SPARROW";
   const letterCol = targetWord.length;
   const wordRows = letterCol < 6 ? 6 : letterCol + 1;
 
