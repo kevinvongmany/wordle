@@ -1,7 +1,7 @@
 import { useContext, useEffect, memo } from "react";
 import AppContext from "../AppContext";
 
-const Letter = memo(({key, letterPosition, attemptValue }) => {
+const Letter = memo(({letterPosition, attemptValue }) => {
   const { board, targetWord, gameOver, currentAttempt, usedLetters, setUsedLetters, solutionArray, setSolutionArray } =
     useContext(AppContext);
   const letter = board[attemptValue][letterPosition];
@@ -15,7 +15,7 @@ const Letter = memo(({key, letterPosition, attemptValue }) => {
     if (letter) {
       setUsedLetters((prev) => [...prev, letter]);
     }
-  }, [currentAttempt.attempt, gameOver, key]);
+  }, [currentAttempt.attempt, gameOver]);
   const almost = solutionArray.includes(letter);
 
   const letterState =

@@ -8,7 +8,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { createBoard, generateWordSet } from "./Words";
-import BogNoted from "./assets/bogNoted.gif";
 
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
