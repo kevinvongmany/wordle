@@ -49,16 +49,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-#correct {
-  background-color: #528d4e;
+.correct {
+  background-color: #528d4e !important;
 }
 
-#almost {
-  background-color: #b49f39;
+.almost {
+  background-color: #b49f39 !important;
 }
 
-#error {
-  background-color: #3a393c;
+.error {
+  background-color: #3a393c !important;
 }
 
 .line1 {
