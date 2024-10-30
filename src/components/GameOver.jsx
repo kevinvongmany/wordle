@@ -10,6 +10,9 @@ function GameOver() {
         {gameOver.guessedWord && (
             <h2 className="text-xl md:text-3xl">It took you {currentAttempt.attempt} attempt{currentAttempt.attempt > 1 && "s"} to guess the word</h2>
         )}
+        {/* CUSTOM MESSAGE  */}
+        <h2 className='text-2xl mt-3'>Be sure to give <a href="https://www.twitch.tv/meanryano/" className="text-blue-500 mt-4 md:mt-6">Meanryano</a> a follow on his Twitch!</h2>
+        {/*  */}
     </div>
   )
 }

@@ -29,7 +29,7 @@ function App() {
     guessedWord: false,
   });
 
-  const targetWord = "NOHIT";
+  const targetWord = "RYANO";
 
   useEffect(() => {
     generateWordSet().then((words) => {
