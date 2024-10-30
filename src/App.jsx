@@ -83,7 +83,7 @@ function App() {
       return;
     }
 
-    if (currentAttempt.attempt === 5) {
+    if (currentAttempt.attempt === 5 && currWord !== targetWord) { // for some reason the last guess always counts as a failure, win or lose
       setGameOver({gameOver: true, guessedWord: false});
     }
 
