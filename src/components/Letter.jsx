@@ -16,13 +16,11 @@ const Letter = memo(({key, letterPosition, attemptValue }) => {
       setUsedLetters((prev) => [...prev, letter]);
     }
   }, [currentAttempt.attempt, gameOver, key]);
-  console.log(usedLetters);
   const almost = solutionArray.includes(letter);
 
   const letterState =
   currentAttempt.attempt > attemptValue &&
   (correct ? "correct" : almost ? "almost" : "error");
-  console.log(letterState);
 
   return (
     <div
