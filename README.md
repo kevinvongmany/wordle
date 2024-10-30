@@ -43,5 +43,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 - [PedroTech](https://www.youtube.com/@PedroTechnologies) for the tutorial inspiration.
-- The React community for their invaluable resources and support.
+- [dwordly-game](https://github.com/getify/dwordly-game/) for the word lists.
+- Bog On My Dog community (Destiny 2 streamer) for the theme.
 - The Wordle game for the original concept.

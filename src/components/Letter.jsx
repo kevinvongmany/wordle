@@ -1,21 +1,34 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, memo } from "react";
 import AppContext from "../AppContext";
 
-function Letter({ letterPosition, attemptValue }) {
-  const { board, targetWord, currentAttempt, setUsedLetters } = useContext(AppContext);
+const Letter = memo(({key, letterPosition, attemptValue }) => {
+  const { board, targetWord, gameOver, currentAttempt, usedLetters, setUsedLetters, solutionArray, setSolutionArray } =
+    useContext(AppContext);
   const letter = board[attemptValue][letterPosition];
   const correct = targetWord[letterPosition] === letter;
-  const almost = !correct && letter !== '' && targetWord.includes(letter);
-  const letterState = currentAttempt.attempt > attemptValue && (correct ? "correct" : almost ? "almost" : "incorrect");
   
   useEffect(() => {
-    if (letter && !correct && !almost) {
+    if (correct) {
+      solutionArray[letterPosition] = null;
+      setSolutionArray([...solutionArray]);
+    }
+    if (letter) {
       setUsedLetters((prev) => [...prev, letter]);
     }
+  }, [currentAttempt.attempt, gameOver, key]);
+  const almost = solutionArray.includes(letter);
 
-  }, [currentAttempt.attempt]);
+  const letterState =
+  currentAttempt.attempt > attemptValue &&
+  (correct ? "correct" : almost ? "almost" : "error");
 
-  return <div className="letter" id={letterState}>{letter}</div>;
-}
+  return (
+    <div
+      className={`p-1 md:p-2 border border-grey-500 rounded-lg text-center m-1 w-12 md:w-28 h-12 md:h-16 text-lg md:text-3xl font-bold text-white font-sans ${letterState}`}
+    >
+      {letter}
+    </div>
+  );
+});
 
 export default Letter;
