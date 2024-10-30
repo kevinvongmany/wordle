@@ -16,7 +16,7 @@ import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 function App() {
   
-  const targetWord = "HORMEL";
+  const targetWord = "CARRY";
   const letterCol = targetWord.length;
   const wordRows = letterCol < 6 ? 6 : letterCol + 1;
 
@@ -95,11 +95,11 @@ function App() {
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
       <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
-        <h1 className="text-center text-3xl font-bold">Bogdle</h1>
+        <h1 className="text-center text-3xl font-bold">Wordlez</h1>
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
-          <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
+          {/* <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" /> */}
         </div>
         <AppContext.Provider
           value={{ 

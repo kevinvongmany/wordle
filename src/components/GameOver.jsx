@@ -6,12 +6,11 @@ function GameOver() {
   return (
     <div className='gameOver mt-9 md:mt-12 text-center md:mb-6'>
         <h3 className="text-xl md:text-3xl mb-4 md:mb-6">{gameOver.guessedWord ? "You guessed the word correctly!" : "Better luck next time!"}</h3>
-        <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was: <a href='https://www.youtube.com/shorts/05kpsBpyTpo' className="text-blue-500">{targetWord}</a></h1>
+        <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was: {targetWord}</h1>
         {gameOver.guessedWord && (
             <h2 className="text-xl md:text-3xl">It took you {currentAttempt.attempt} attempt{currentAttempt.attempt > 1 && "s"} to guess the word</h2>
         )}
         {/* CUSTOM MESSAGE  */}
-        <h2 className='text-2xl mt-3'>Be sure to give Hormel a follow on their <a href="https://www.twitch.tv/haminator100" className="text-blue-500 mt-4 md:mt-6">Twitch!</a></h2>
         {/*  */}
     </div>
   )
