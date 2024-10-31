@@ -11,9 +11,9 @@ function GameOver() {
             <h2 className="text-xl md:text-3xl">It took you {currentAttempt.attempt} attempt{currentAttempt.attempt > 1 && "s"} to guess the word</h2>
         )}
         {/* CUSTOM MESSAGE  */}
-          <h2 className='text-2xl mt-3'>Happy Halloween Bog-chat!</h2>
+          <h2 className='text-2xl mt-3'>🎃 Happy Halloween Bog-chat! 🎃</h2>
           <h2 className='text-2xl mt-3'>From your fellow Australian community & Bog! ❤</h2>
-          <h2 className='text-2xl mt-3'>Be sure to give <a href="https://www.twitch.tv/femmespook/" className="text-blue-500 mt-4 md:mt-6">FemmeSpook</a> a follow on their Twitch!</h2>
+          <h2 className='text-2xl mt-3'>Also, be sure to give <a href="https://www.twitch.tv/femmespook/" className="text-blue-500 mt-4 md:mt-6">FemmeSpook</a> a follow on their Twitch!</h2>
         {/*  */}
     </div>
   )
