@@ -16,7 +16,7 @@ function GameOver() {
           <img src={BogJam} alt="Bog Jam" className="w-14 md:w-32 items-center flex" />
         </div>
           <p className="text-xl md:text-xl mt-3">Want more Wordle? Check out the <a className="text-blue-600 underline" href='https://kevdle.netlify.app'>unthemed version</a>!</p>
-          <p className="text-md md:text-xl mt-3">This emote is from the great work of Mang0Luck, feel free to check out more work on their Twitter/X: <a className="text-blue-600 underline" href='https://x.com/lam4ngo?lang=en'>@lam4ngo</a></p>
+          <p className="text-md md:text-xl mt-3">Artist credit: Mang0Luck. Feel free to check out more work on their Twitter/X: <a className="text-blue-600 underline" href='https://x.com/lam4ngo?lang=en'>@lam4ngo</a></p>
         {/*  */}
     </div>
   )
