@@ -2,7 +2,7 @@ import { useContext, useEffect, memo } from "react";
 import AppContext from "../AppContext";
 
 const Letter = memo(({letterPosition, attemptValue }) => {
-  const { board, targetWord, gameOver, currentAttempt, usedLetters, setUsedLetters, solutionArray, setSolutionArray } =
+  const { board, targetWord, gameOver, currentAttempt, setUsedLetters, solutionArray, setSolutionArray } =
     useContext(AppContext);
   const letter = board[attemptValue][letterPosition];
   const correct = targetWord[letterPosition] === letter;
