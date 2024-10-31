@@ -18,7 +18,7 @@ function Key({ keyValue, isLarge, used }) {
   };
   return (
     <div 
-    className={`w-9 h-12 md:w-24 md:h-24 m-0.5 md:m-1.5 rounded grid place-items-center text-sm md:text-2xl bg-gray-500 text-white font-sans cursor-pointer ${almost ? 'almost' : correct ? 'correct' : ''}`}
+    className={`w-9 h-12 md:w-24 md:h-24 m-0.5 md:m-1.5 rounded grid place-items-center text-sm md:text-2xl bg-orange-600 text-white font-sans cursor-pointer ${almost ? 'almost' : correct ? 'correct' : ''}`}
     id={isLarge ? "large" : used && "disabled"} 
     onClick={selectletter}>
       {keyValue === "DEL" ? <FaBackspace /> : keyValue}

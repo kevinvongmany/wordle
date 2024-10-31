@@ -29,7 +29,7 @@ function App() {
     guessedWord: false,
   });
   
-  const targetWord = "RYANO";
+  const targetWord = "SPOOK";
   const [solutionArray, setSolutionArray] = useState([]);
   const [guessedWords, setGuessedWords] = useState([]);
 
@@ -92,14 +92,16 @@ function App() {
 
   };
   return (
-    <div className="flex flex-col bg-gray-900 text-white w-full">
+    <div className="flex flex-col bg-black text-white w-full">
       <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
         <h1 className="text-center text-3xl font-bold">Bogdle</h1>
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
+          <h2 className="text-2xl font-bold">🦇</h2>
           <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
-        </div>
+          <h2 className="text-2xl font-bold">🦇</h2>
+          </div>
         <AppContext.Provider
           value={{ 
             board, 
