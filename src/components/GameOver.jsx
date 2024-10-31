@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import AppContext from '../AppContext'
+import BogJam from '../assets/bogJam.gif'
 
 function GameOver() {
   const {gameOver, currentAttempt, targetWord} = useContext(AppContext)
@@ -11,9 +12,10 @@ function GameOver() {
             <h2 className="text-xl md:text-3xl">It took you {currentAttempt.attempt} attempt{currentAttempt.attempt > 1 && "s"} to guess the word</h2>
         )}
         {/* CUSTOM MESSAGE  */}
-          <h2 className='text-2xl mt-3'>🎃 Happy Halloween Bog-chat! 🎃</h2>
-          <h2 className='text-2xl mt-3'>From your fellow Australian community & Bog! ❤</h2>
-          <h2 className='text-2xl mt-3'>Also, be sure to give <a href="https://www.twitch.tv/femmespook/" className="text-blue-500 mt-4 md:mt-6">FemmeSpook</a> a follow on their Twitch!</h2>
+        <div className="mt-6 md:mt-12 flex items-center justify-center">
+          <img src={BogJam} alt="Bog Jam" className="w-14 md:w-32 items-center flex" />
+        </div>
+          <p className="text-xl md:text-3xl mt-3">Want more Wordle? Check out my <a className="text-blue-600 underline" href='https://kevdle.netlify.app'>unthemed version</a>!</p>
         {/*  */}
     </div>
   )
