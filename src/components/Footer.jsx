@@ -10,7 +10,7 @@ export default function Footer() {
                         <FaGithub className="w-6 h-6" />
                     </a>
                 </div>
-                <p className='text-white'>© 2024 Kevin Vongmany</p>
+                <p className='text-white'>© 2024</p>
             </div>
         </footer>
     );
