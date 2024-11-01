@@ -16,7 +16,7 @@ import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 function App() {
   
-  const targetWord = "SPOOK";
+  const targetWord = "BOGJAM";
   const letterCol = targetWord.length;
   const wordRows = letterCol < 6 ? 6 : letterCol + 1;
 
@@ -93,15 +93,13 @@ function App() {
 
   };
   return (
-    <div className="flex flex-col bg-black text-white w-full">
+    <div className="flex flex-col bg-gray-900 text-white w-full">
       <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
         <h1 className="text-center text-3xl font-bold">Bogdle</h1>
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
-          <h2 className="text-2xl font-bold">🦇</h2>
           <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
-          <h2 className="text-2xl font-bold">🦇</h2>
           </div>
         <AppContext.Provider
           value={{ 
@@ -122,6 +120,7 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
+            <p className="text-center text-xl">Six letters!?</p>
             {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           </div>
         </AppContext.Provider>
