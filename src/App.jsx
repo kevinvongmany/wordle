@@ -16,7 +16,7 @@ import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 function App() {
   
-  const targetWord = "BOGJAM";
+  const targetWord = "BEPIS";
   const letterCol = targetWord.length;
   const wordRows = letterCol < 6 ? 6 : letterCol + 1;
 
@@ -120,7 +120,6 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
-            <p className="text-center text-xl">Six letters!?</p>
             {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           </div>
         </AppContext.Provider>
