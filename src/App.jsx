@@ -15,7 +15,7 @@ import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
 function App() {
   
-  let targetWord = "abide";
+  let targetWord = "door";
   targetWord = targetWord.toUpperCase();
   const letterCol = targetWord.length;
   const wordRows = letterCol < 6 ? 6 : letterCol + 1;
