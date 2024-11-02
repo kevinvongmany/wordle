@@ -14,12 +14,23 @@ import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+
+import useWordle from "./hooks/useWordle";
+
 function App() {
   
   const targetWord = "BOGJAM";
   const letterCol = targetWord.length;
   const wordRows = letterCol < 6 ? 6 : letterCol + 1;
 
+  const {turn, currentGuess, guesses, isCorrect, handleKeyUp} = useWordle(targetWord);
+
+  useEffect(() => {
+    window.addEventListener("keyup", handleKeyUp);
+    return () => {
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, [handleKeyUp]);
   const [board, setBoard] = useState(createBoard(wordRows, letterCol));
   const [currentAttempt, setCurrentAttempt] = useState({
     attempt: 0,
