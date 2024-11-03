@@ -1,6 +1,5 @@
 import React, {useContext} from 'react'
 import AppContext from '../AppContext'
-import BogJam from '../assets/bogJam.gif'
 
 function GameOver() {
   const {targetWord, turn, isCorrect} = useContext(AppContext)
