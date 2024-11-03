@@ -48,8 +48,8 @@ function App() {
         <h1 className="text-center text-3xl font-bold">Kevdle</h1>
       </nav>
       <div className="min-h-screen px-3 py-12">
-        <div className="mt-4 flex justify-center text-xl">
-          A wordle clone!
+        <div className="flex justify-center text-xl my-8">
+          <a href="https://www.nytimes.com/2022/02/10/crosswords/best-wordle-tips.html" className="text-underline text-blue-400 font-bold">How to play</a>
         </div>
         <AppContext.Provider
           value={{ 
