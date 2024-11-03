@@ -67,7 +67,6 @@ function App() {
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
             <Keyboard />
-            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a>!</p>
             {showModal && <GameOver />}
 
           </div>
