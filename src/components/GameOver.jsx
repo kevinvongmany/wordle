@@ -1,17 +1,31 @@
 import React, {useContext} from 'react'
 import AppContext from '../AppContext'
+import Results from './Results'
 
 function GameOver() {
-  const {gameOver, currentAttempt, targetWord} = useContext(AppContext)
+  const {targetWord, turn, isCorrect, setShowModal, guesses} = useContext(AppContext)
+
+
+  const handleRestart = () => {
+    window.location.reload();
+  }
+
+  console.log(guesses);
   return (
-    <div className='gameOver mt-9 md:mt-12 text-center md:mb-6'>
-        <h3 className="text-xl md:text-3xl mb-4 md:mb-6">{gameOver.guessedWord ? "You guessed the word correctly!" : "Better luck next time!"}</h3>
-        <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was: {targetWord}</h1>
-        {gameOver.guessedWord && (
-            <h2 className="text-xl md:text-3xl">It took you {currentAttempt.attempt} attempt{currentAttempt.attempt > 1 && "s"} to guess the word</h2>
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div className="bg-black bg-opacity-90 p-12 rounded-3xl shadow-lg text-center">
+        <h3 className="text-xl md:text-3xl mb-4 md:mb-6">{isCorrect ? "You guessed the word correctly!" : "Better luck next time!"}</h3>
+        <Results />
+        {isCorrect && (
+          <h2 className="text-xl md:text-3xl mb-6">You had {turn} attempt{turn > 1 && "s"} to guess the word!</h2>
         )}
-        {/* CUSTOM MESSAGE  */}
-        {/*  */}
+
+        <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was {targetWord}</h1>
+
+        <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleRestart}>
+          Play Again
+        </button>
+      </div>
     </div>
   )
 }

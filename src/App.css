@@ -49,15 +49,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-.correct {
+.green {
   background-color: #528d4e !important;
 }
 
-.almost {
+.yellow {
   background-color: #b49f39 !important;
 }
 
-.error {
+.grey {
   background-color: #3a393c !important;
 }
 
