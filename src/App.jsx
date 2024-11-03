@@ -7,91 +7,42 @@ import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { createBoard, generateWordSet } from "./Words";
+// import { createBoard, generateWordSet } from "./Words";
 import BogNoted from "./assets/bogNoted.gif";
 
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+
+import useWordle from "./hooks/useWordle";
+
 function App() {
   
-  const targetWord = "BEPIS";
-  const letterCol = targetWord.length;
-  const wordRows = letterCol < 6 ? 6 : letterCol + 1;
+  let targetWord = "CBGRAY";
+  targetWord = targetWord.toUpperCase();
 
-  const [board, setBoard] = useState(createBoard(wordRows, letterCol));
-  const [currentAttempt, setCurrentAttempt] = useState({
-    attempt: 0,
-    letterPosition: 0,
-  });
-  const [wordSet, setWordSet] = useState(new Set());
-  const [usedLetters, setUsedLetters] = useState([]);
-  const [gameOver, setGameOver] = useState({
-    gameOver: false,
-    guessedWord: false,
-  });
+  const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
+  const [showModal, setShowModal] = useState(false);
   
-  const [solutionArray, setSolutionArray] = useState([]);
-  const [guessedWords, setGuessedWords] = useState([]);
 
   useEffect(() => {
-    const words = generateWordSet(targetWord.length);
-    setWordSet(words);
-    
-    setSolutionArray(Array.from(targetWord).map((letter) => letter.toUpperCase()));
-  }, []);
+    window.addEventListener("keyup", handleKeyUp);
+    if (isCorrect) {
+      setTimeout(() => setShowModal(true), 500);
+      window.removeEventListener("keyup", handleKeyUp);
+    }
 
-  const onSelectLetter = (keyValue) => {
-    if (currentAttempt.letterPosition === letterCol) return;
-    board[currentAttempt.attempt][currentAttempt.letterPosition] = keyValue;
-    setCurrentAttempt({
-      ...currentAttempt,
-      letterPosition: currentAttempt.letterPosition + 1,
-    });
-    setBoard(board);
-  };
+    if (turn >= maxTurns) {
+      setTimeout(() => setShowModal(true), 500);
+      window.removeEventListener("keyup", handleKeyUp
+      )};
 
-  const onDelete = () => {
-    if (currentAttempt.letterPosition === 0) return;
-    board[currentAttempt.attempt][currentAttempt.letterPosition - 1] = "";
-    setCurrentAttempt({
-      ...currentAttempt,
-      letterPosition: currentAttempt.letterPosition - 1,
-    });
-    setBoard(board);
-  };
-
-  const onEnter = () => {
-    if (currentAttempt.letterPosition !== letterCol) {
-      toast.warning(`Please enter ${letterCol} letters`);
-      return;
+    return () => {
+      window.removeEventListener("keyup", handleKeyUp);
     };
+  }, [handleKeyUp, isCorrect]);
 
-    let currWord = "";
-    for (let i = 0; i < letterCol; i++) {
-      currWord += board[currentAttempt.attempt][i];
-    }
-    if (currWord === targetWord) {
-      setGameOver({gameOver: true, guessedWord: true});
-    }
-    if (wordSet.has(currWord.toLowerCase()) && !guessedWords.includes(currWord)) {
-      setGuessedWords([...guessedWords, currWord]);
-      setCurrentAttempt({
-        attempt: currentAttempt.attempt + 1,
-        letterPosition: 0,
-      });
-    } else {
-      toast.warning(guessedWords.includes(currWord) ? "Word already guessed." : "Word not found in dictionary");
-      return;
-    }
-
-    if (currentAttempt.attempt === wordRows - 1 && currWord !== targetWord) { // for some reason the last guess always counts as a failure, win or lose
-      setGameOver({gameOver: true, guessedWord: false});
-    }
-
-
-  };
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
       <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
@@ -103,24 +54,23 @@ function App() {
           </div>
         <AppContext.Provider
           value={{ 
-            board, 
-            setBoard, 
-            currentAttempt, 
-            setCurrentAttempt,
-            onSelectLetter,
-            onDelete,
-            onEnter,
-            usedLetters,
-            setUsedLetters,
-            solutionArray,
-            setSolutionArray,
+            currentGuess,
+            guesses,
+            turn,
+            isCorrect,
+            maxTurns,
             targetWord,
-            gameOver
+            usedKeys,
+            handleKeyUp,
+            setShowModal,
           }}
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
-            {gameOver.gameOver ? <GameOver /> : <Keyboard />}
+            <Keyboard />
+            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a>!</p>
+            {showModal && <GameOver />}
+
           </div>
         </AppContext.Provider>
       </div>
