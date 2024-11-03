@@ -120,7 +120,9 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
-            {gameOver.gameOver ? <GameOver /> : <Keyboard />}
+            <Keyboard />
+            {showModal && <GameOver />}
+
           </div>
         </AppContext.Provider>
       </div>
