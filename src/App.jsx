@@ -19,34 +19,16 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "SORAIN";
+  let targetWord = "CBGRAY";
   targetWord = targetWord.toUpperCase();
 
   const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
   const [showModal, setShowModal] = useState(false);
-
-  // useEffect(() => {
-  //   const words = generateWordSet(targetWord.length);
-  //   setWordSet(words);
-  // }, []);
-
-
-  const [currentAttempt, setCurrentAttempt] = useState({
-    attempt: 0,
-    letterPosition: 0,
-  });
-  const [wordSet, setWordSet] = useState(new Set());
-  const [usedLetters, setUsedLetters] = useState([]);
-  const [gameOver, setGameOver] = useState({
-    gameOver: false,
-    guessedWord: false,
-  });
   
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyUp);
     if (isCorrect) {
-      console.log("correct");
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp);
     }
@@ -77,21 +59,18 @@ function App() {
             turn,
             isCorrect,
             maxTurns,
-            currentAttempt, 
-            setCurrentAttempt,
-            usedLetters,
-            setUsedLetters,
-            setGameOver,
             targetWord,
             usedKeys,
             handleKeyUp,
-            gameOver
+            setShowModal,
           }}
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
             <Keyboard />
+            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a>!</p>
             {showModal && <GameOver />}
+
           </div>
         </AppContext.Provider>
       </div>
