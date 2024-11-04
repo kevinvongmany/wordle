@@ -3,14 +3,13 @@ import AppContext from '../AppContext'
 import Results from './Results'
 
 function GameOver() {
-  const {targetWord, turn, isCorrect, setShowModal, guesses} = useContext(AppContext)
+  const {targetWord, turn, isCorrect} = useContext(AppContext)
 
 
   const handleRestart = () => {
     window.location.reload();
   }
 
-  console.log(guesses);
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-black bg-opacity-90 p-12 rounded-3xl shadow-lg text-center">
@@ -22,9 +21,7 @@ function GameOver() {
 
         <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was {targetWord}</h1>
         {/* Custom message */}
-        <h2 className="text-sm md:text-xl mt-3">Please support cbgray in his journey to get EVERY exotic in Destiny in ONE stream: </h2>
-        <h2 className="text-sm md:text-3xl mt-3"><a href='https://twitch.tv/cbgray' className='text-blue-400 text-underline mt-3 mb-3' target='_blank'>twitch.tv/cbgray</a></h2>
-        <h2 className="text-sm md:text-xl mt-3">Type <a href='https://i.ebayimg.com/images/g/q-UAAOSwXdphoXIn/s-l1200.jpg' className='text-blue-400 text-underline' target='_blank'>dr pepper baked beans</a> into his chat if you enjoyed this Bogdle!</h2>
+        <h2 className="text-sm md:text-xl my-3 text-pink-500">Say hi cammie to hi_cammie if you enjoyed this Bogdle!</h2>
         {/*  */}
 
         <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a>!</p>
