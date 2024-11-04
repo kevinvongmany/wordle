@@ -12,7 +12,7 @@ function GameOver() {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-black bg-opacity-90 p-12 rounded-3xl shadow-lg text-center">
+      <div className="bg-black p-12 rounded-3xl shadow-lg text-center">
         <h3 className="text-xl md:text-3xl mb-4 md:mb-6">{isCorrect ? "You guessed the word correctly!" : "Better luck next time!"}</h3>
         <Results />
         {isCorrect && (
