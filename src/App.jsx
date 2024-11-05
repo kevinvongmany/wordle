@@ -4,11 +4,9 @@ import { useEffect, useState } from "react";
 
 import AppContext from "./AppContext";
 import { ToastContainer } from 'react-toastify';
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// import { createBoard, generateWordSet } from "./Words";
-import BogNoted from "./assets/bogNoted.gif";
+import onpamNoted from "./assets/onpamNoted.webp";
 
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
@@ -19,7 +17,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "RIVEN";
+  let targetWord = "MILITO";
   targetWord = targetWord.toUpperCase();
 
   const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
@@ -50,7 +48,7 @@ function App() {
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
-          <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
+          <img src={onpamNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
           </div>
         <AppContext.Provider
           value={{ 
@@ -68,7 +66,7 @@ function App() {
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
             <Keyboard />
-            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a>!</p>
+            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://bogdle.com/' className='text-blue-400 text-underline' target='_blank'>bogdle</a>!</p>
             {showModal && <GameOver />}
 
           </div>
