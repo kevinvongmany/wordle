@@ -6,8 +6,8 @@ function GameOver() {
   const {targetWord, turn, isCorrect} = useContext(AppContext)
 
 
-  const handleRestart = () => {
-    window.location.reload();
+  const handleRedirect = () => {
+    window.location.href = "https://wordpam.netlify.app/";
   }
 
   return (
@@ -24,10 +24,10 @@ function GameOver() {
         <h2 className="text-sm md:text-xl my-3 text-pink-500">Say hi cammie to hi_cammie if you enjoyed this Bogdle!</h2>
         {/*  */}
 
-        <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a>!</p>
+        <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or try Wordpam!</p>
 
-        <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleRestart}>
-          Play Again
+        <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleRedirect}>
+          Play Wordpam
         </button>
       </div>
     </div>
