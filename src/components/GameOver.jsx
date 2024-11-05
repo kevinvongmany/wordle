@@ -6,8 +6,8 @@ function GameOver() {
   const {targetWord, turn, isCorrect} = useContext(AppContext)
 
 
-  const handleReload = () => {
-    window.location.reload()
+  const handleRedirect = () => {
+    window.location.href = "https://bogdle.com/";
   }
 
   return (
@@ -20,9 +20,13 @@ function GameOver() {
         )}
 
         <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was {targetWord}</h1>
+        {/* Custom message */}
+        {/*  */}
 
-        <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleReload}>
-          Admire Puzzle
+        <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or try Bogdle!</p>
+
+        <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleRedirect}>
+          Play Bogdle
         </button>
       </div>
     </div>
