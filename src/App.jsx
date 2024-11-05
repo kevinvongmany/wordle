@@ -18,7 +18,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "pelt";
+  let targetWord = "RENEW";
   targetWord = targetWord.toUpperCase();
 
   const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
