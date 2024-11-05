@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
       <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
-        <h1 className="text-center text-3xl font-bold">Bogdle</h1>
+        <h1 className="text-center text-3xl font-bold">Wordpam</h1>
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
