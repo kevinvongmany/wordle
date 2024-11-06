@@ -2,20 +2,66 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { generateWordSet } from "../Words";
 
-const useWordle = (solution) => {
-  const [turn, setTurn] = useState(0);
+const useWordle = (solution, newGame, setNewGame) => {
+  if (newGame) {
+    console.log("New word detected, clearing board state");
+  }
+  const clearLocalStorage = () => {
+    localStorage.removeItem("turn");
+    localStorage.removeItem("guesses");
+    localStorage.removeItem("history");
+    localStorage.removeItem("usedKeys");
+    localStorage.removeItem("gameComplete");
+  };
+
+  if (newGame) {
+    clearLocalStorage();
+  } 
+
+  const [turn, setTurn] = useState(() => {
+    const savedTurn = localStorage.getItem("turn");
+    return savedTurn && !newGame ? JSON.parse(savedTurn) : 0;
+  });
   const [maxTurns, setMaxTurns] = useState(solution.length < 6 ? 6 : solution.length + 1);
   const [currentGuess, setCurrentGuess] = useState("");
-  const [guesses, setGuesses] = useState([...Array(maxTurns)]);
-  const [history, setHistory] = useState([]);
+  const [guesses, setGuesses] = useState(() => {
+    const savedGuesses = localStorage.getItem("guesses");
+    return savedGuesses ? JSON.parse(savedGuesses) : [...Array(maxTurns)];
+  });
+  const [history, setHistory] = useState(() => {
+    const savedHistory = localStorage.getItem("history");
+    return savedHistory && !newGame ? JSON.parse(savedHistory) : [];
+  });
   const [isCorrect, setIsCorrect] = useState(false);
-  const [usedKeys, setUsedKeys] = useState({});
+  const [usedKeys, setUsedKeys] = useState(() => {
+    const savedUsedKeys = localStorage.getItem("usedKeys");
+    return savedUsedKeys && !newGame ? JSON.parse(savedUsedKeys) : {};
+  });
   const [wordSet, setWordSet] = useState(new Set());
 
   useEffect(() => {
     const words = generateWordSet(solution.length);
     setWordSet(words);
-  }, []);
+  }, [solution.length]);
+
+  useEffect(() => {
+  }, [solution]);
+
+  useEffect(() => {
+    localStorage.setItem("turn", JSON.stringify(turn));
+  }, [turn]);
+
+  useEffect(() => {
+    localStorage.setItem("guesses", JSON.stringify(guesses));
+  }, [guesses]);
+
+  useEffect(() => {
+    localStorage.setItem("history", JSON.stringify(history));
+  }, [history]);
+
+  useEffect(() => {
+    localStorage.setItem("usedKeys", JSON.stringify(usedKeys));
+  }, [usedKeys]);
 
   const formatGuess = () => {
     let solutionArray = [...solution];
@@ -46,7 +92,6 @@ const useWordle = (solution) => {
     if (currentGuess.toUpperCase() === solution) {
       setIsCorrect(true);
     }
-    console.log(isCorrect);
     setGuesses((prev) => {
       const newGuesses = [...prev];
       newGuesses[turn] = guessData;
@@ -75,11 +120,10 @@ const useWordle = (solution) => {
       return newKeys;
     });
     setCurrentGuess("");
-
+    
   };
-
+  
   const handleKeyUp = ({ key }) => {
-    console.log(key);
     if (key === "Enter") {
       if (turn > maxTurns) {
         return;
@@ -92,11 +136,13 @@ const useWordle = (solution) => {
         toast.warning(`Your guess must be ${solution.length} characters long`);
         return;
       }
-
+      
       if (!wordSet.has(currentGuess.toLowerCase())) {
         toast.warning("That is not a valid word");
         return;
       }
+      localStorage.setItem("solution", solution);
+      setNewGame(false);
       const guess = formatGuess();
       addNewGuess(guess);
     }
@@ -113,7 +159,7 @@ const useWordle = (solution) => {
     }
   };
 
-  return { turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp };
+  return { turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp, history };
 };
 
 export default useWordle;
