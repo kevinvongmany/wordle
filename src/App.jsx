@@ -19,7 +19,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "RIVEN";
+  let targetWord = "MICKY";
   targetWord = targetWord.toUpperCase();
 
   const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
