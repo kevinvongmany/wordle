@@ -33,7 +33,7 @@ const Results = () => {
   }
 
   const handleCopy = () => {
-    const shareString = `Bogdle Results: (${turn}/${maxTurns})\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://bogdle.com/`;
+    const shareString = `Bogdle score ${turn}/${maxTurns}\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://bogdle.com/`;
     copy(shareString);
     toast.success("Copied to clipboard!");
   }
