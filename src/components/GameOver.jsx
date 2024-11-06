@@ -7,7 +7,7 @@ function GameOver() {
 
 
   const handleRedirect = () => {
-    window.location.href = 'https://bogdle.com/';
+    window.location.href = "https://wordpam.netlify.app/";
   }
 
   return (
