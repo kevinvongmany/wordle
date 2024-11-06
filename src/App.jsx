@@ -17,7 +17,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "MILITO";
+  let targetWord = "SHXVEL";
   targetWord = targetWord.toUpperCase();
 
   const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
