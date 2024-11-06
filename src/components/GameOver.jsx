@@ -7,11 +7,7 @@ function GameOver() {
 
 
   const handleRedirect = () => {
-<<<<<<< HEAD
-    window.location.href = 'https://bogdle.com/';
-=======
     window.location.href = "https://wordpam.netlify.app/";
->>>>>>> 816fa498d65dcdccf6aef5f909327b791ebcd752
   }
 
   return (
@@ -27,17 +23,10 @@ function GameOver() {
         {/* Custom message */}
         {/*  */}
 
-<<<<<<< HEAD
-        <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or click below to try Bogdle!</p>
-
-        <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleRedirect}>
-          Play Bogdle
-=======
         <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or try Wordpam!</p>
 
         <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleRedirect}>
           Play Wordpam
->>>>>>> 816fa498d65dcdccf6aef5f909327b791ebcd752
         </button>
       </div>
     </div>
