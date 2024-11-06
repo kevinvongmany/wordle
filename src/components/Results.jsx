@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import AppContext from "../AppContext";
+import copy from "copy-to-clipboard";
+import { toast } from "react-toastify";
 
 const Results = () => {
   
-  const { guesses } = useContext(AppContext);
+  const { guesses, turn, maxTurns } = useContext(AppContext);
   console.log(guesses);
   
   function generateWordleResult(input) {
@@ -29,6 +31,12 @@ const Results = () => {
 
     return result;
   }
+
+  const handleCopy = () => {
+    const shareString = `Wordpam Results: (${turn}/${maxTurns})\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://wordpam.netlify.app/`;
+    copy(shareString);
+    toast.success("Copied to clipboard!");
+  }
   
 
   return (
@@ -36,6 +44,9 @@ const Results = () => {
       {generateWordleResult(guesses).map((row, i) => (
         <p key={i}>{row}</p>
       ))}
+      <button onClick={handleCopy} className="bg-gray-800 text-white px-4 py-2 mt-8 mb-6 rounded">
+        Share
+      </button>
     </div>
   );
 };
