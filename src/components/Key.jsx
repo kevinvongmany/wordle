@@ -4,9 +4,10 @@ import AppContext from "../AppContext";
 import { FaBackspace } from "react-icons/fa";
 
 function Key({ keyValue, colour, isLarge, used }) {
-  const { handleKeyUp } = useContext(AppContext);
+  const { handleKeyUp, gameComplete } = useContext(AppContext);
 
   const handleClick = (e) => {
+    if (gameComplete) return;
     const key = e.currentTarget.dataset.key;
     if (key === "DEL") {
       handleKeyUp({ key: "Backspace" });

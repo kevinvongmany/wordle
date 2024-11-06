@@ -67,6 +67,7 @@ function App() {
             maxTurns,
             targetWord,
             usedKeys,
+            gameComplete,
             handleKeyUp,
             setShowModal,
           }}
