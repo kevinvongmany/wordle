@@ -33,7 +33,7 @@ const Results = () => {
   }
 
   const handleCopy = () => {
-    const shareString = `Bogdle Results: (${turn}/${maxTurns})\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://bogdle.com/`;
+    const shareString = `Kevdle Results: (${turn}/${maxTurns})\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://kevdle.netlify.app/`;
     copy(shareString);
     toast.success("Copied to clipboard!");
   }
