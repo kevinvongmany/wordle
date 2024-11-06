@@ -22,7 +22,7 @@ function GameOver() {
         <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was {targetWord}</h1>
 
         <button className="bg-gray-800 text-white px-4 py-2 mt-8 rounded" onClick={handleReload}>
-          Play Wordpam
+          Play Again
         </button>
       </div>
     </div>
