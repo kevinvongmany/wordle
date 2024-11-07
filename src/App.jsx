@@ -17,29 +17,36 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "BURGER";
-  targetWord = targetWord.toUpperCase();
+  const [targetWord, setTargetWord] = useState("ORELICO");
+  const solution = localStorage.getItem("solution");
+  const [newGame, setNewGame] = useState(solution !== targetWord);
+  const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
 
-  const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
+  const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord, newGame, setNewGame);
   const [showModal, setShowModal] = useState(false);
   
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyUp);
+    if (gameComplete) {
+      window.removeEventListener("keyup", handleKeyUp);
+    }
     if (isCorrect) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp);
+      localStorage.setItem("gameComplete", true);
     }
 
     if (turn >= maxTurns) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp
-      )};
-
+      )
+      localStorage.setItem("gameComplete", true);
+    };
     return () => {
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [handleKeyUp, isCorrect]);
+  }, [handleKeyUp, isCorrect, gameComplete]);
 
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
@@ -59,6 +66,7 @@ function App() {
             maxTurns,
             targetWord,
             usedKeys,
+            gameComplete,
             handleKeyUp,
             setShowModal,
           }}
