@@ -19,29 +19,36 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  let targetWord = "MICKY";
-  targetWord = targetWord.toUpperCase();
+  const [targetWord, setTargetWord] = useState("ARAN");
+  const solution = localStorage.getItem("solution");
+  const [newGame, setNewGame] = useState(solution !== targetWord);
+  const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
 
-  const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord);
+  const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord, newGame, setNewGame);
   const [showModal, setShowModal] = useState(false);
   
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyUp);
+    if (gameComplete) {
+      window.removeEventListener("keyup", handleKeyUp);
+    }
     if (isCorrect) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp);
+      localStorage.setItem("gameComplete", true);
     }
 
     if (turn >= maxTurns) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp
-      )};
-
+      )
+      localStorage.setItem("gameComplete", true);
+    };
     return () => {
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [handleKeyUp, isCorrect]);
+  }, [handleKeyUp, isCorrect, gameComplete]);
 
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
@@ -51,7 +58,7 @@ function App() {
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
           <img src={BogNoted} alt="Bog Noted" className="flex items-center mb-5 w-12 md:w-24" />
-          </div>
+        </div>
         <AppContext.Provider
           value={{ 
             currentGuess,
@@ -61,6 +68,7 @@ function App() {
             maxTurns,
             targetWord,
             usedKeys,
+            gameComplete,
             handleKeyUp,
             setShowModal,
           }}
