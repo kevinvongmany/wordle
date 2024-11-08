@@ -21,6 +21,9 @@ function GameOver() {
 
         <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was {targetWord}</h1>
         {/* Custom message */}
+        <p className='text-xl md:text-3xl'>Repeat after me:</p>
+        <p className='text-xl md:text-3xl mb-4 md:mb-6 text-red-500'>Witherhoard 👏 makes 👏 the 👏 boss 👏 taken</p>
+        <p className='text-xl md:text-3xl mb-4 md:mb-6'>Click here to relive this moment in <a className='text-blue-600' href='https://youtu.be/GHFoVvUTwek?t=1213' target="_blank">LFG Bingo #10</a></p>
         {/*  */}
 
         <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or try Bogdle!</p>
