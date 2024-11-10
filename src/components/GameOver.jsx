@@ -19,8 +19,9 @@ function GameOver() {
           <h2 className="text-xl md:text-3xl mb-6">You had {turn} attempt{turn > 1 && "s"} to guess the word!</h2>
         )}
 
-        <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was {targetWord}</h1>
+        <h1 className="text-2xl md:text-5xl mb-4 md:mb-6">The word was <a href='https://streamable.com/ef2kyc' target='_blank' className="text-blue-400">{targetWord}</a></h1>
         {/* Custom message */}
+        <p className="text-sm md:text-lg">That would have ACTUALLY been good damage if I had a SUPER. *bangs on table x3* I want more intellect--I'm gonna cry--I'm gonna throw a tantrum! *bangs table* I want my super back pleeease. Please--WAAAH! I need a binky--I need an <a href='https://streamable.com/ef2kyc' target='_blank' className="text-blue-400">intellect-spiked binky</a>...</p>
         {/*  */}
 
         <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or try Bogdle!</p>
