@@ -8,7 +8,7 @@ function GameOver() {
 
 
   const handleRedirect = () => {
-    window.location.href = "https://wordpam.netlify.app/";
+    window.location.href = "https://wordpam.com/";
   }
 
   return (
