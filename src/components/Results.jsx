@@ -2,6 +2,7 @@ import { useContext } from "react";
 import AppContext from "../AppContext";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";
+import { FaCopy } from "react-icons/fa";
 
 const Results = () => {
   
@@ -40,13 +41,17 @@ const Results = () => {
   
 
   return (
-    <div>
+    <div className="mb-4">
+      <button 
+        onClick={handleCopy} 
+        className="bg-green-800 text-white px-4 py-2 mb-6 rounded hover:bg-green-700 transition duration-300"
+      >
+        <FaCopy className="inline-block mr-2" />
+        Share results! 
+      </button>
       {generateWordleResult(guesses).map((row, i) => (
         <p key={i}>{row}</p>
       ))}
-      <button onClick={handleCopy} className="bg-gray-800 text-white px-4 py-2 mt-8 mb-6 rounded">
-        Share
-      </button>
     </div>
   );
 };
