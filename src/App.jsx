@@ -81,6 +81,7 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
+            <p>Please refresh the page if the keyboard doesn't work!</p>
             {gameComplete && 
               <button 
                 className="bg-green-800 text-white px-4 py-2 mt-8 rounded"
