@@ -83,12 +83,12 @@ function App() {
             <Board />
             {gameComplete && 
               <button 
-                className="bg-gray-800 text-white px-4 py-2 mt-8 rounded"
+                className="bg-green-800 text-white px-4 py-2 mt-8 rounded"
                 onClick={() => {
                   setShowModal(true);
                 }}
               >
-                Share with friends!
+                Share results!
               </button>
             }
             <Keyboard />
