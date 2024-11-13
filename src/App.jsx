@@ -14,12 +14,13 @@ import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+import { FaRedo } from 'react-icons/fa';
 
 import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("TOPADU");
+  const [targetWord, setTargetWord] = useState("GLADD");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
@@ -27,28 +28,34 @@ function App() {
   const {turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp} = useWordle(targetWord, newGame, setNewGame);
   const [showModal, setShowModal] = useState(false);
   
-
   useEffect(() => {
-    window.addEventListener("keyup", handleKeyUp);
-    if (gameComplete) {
-      window.removeEventListener("keyup", handleKeyUp);
-    }
     if (isCorrect) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp);
       localStorage.setItem("gameComplete", true);
+      setGameComplete(true);
     }
+  }, [isCorrect]);
 
+  useEffect(() => {
     if (turn >= maxTurns) {
       setTimeout(() => setShowModal(true), 500);
-      window.removeEventListener("keyup", handleKeyUp
-      )
+      window.removeEventListener("keyup", handleKeyUp)
       localStorage.setItem("gameComplete", true);
+      setGameComplete(true);
     };
+  }, [gameComplete, turn, maxTurns])
+
+  useEffect(() => {
+    if (!gameComplete) {
+      window.addEventListener("keyup", handleKeyUp);
+    }
+    
     return () => {
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [handleKeyUp, isCorrect, gameComplete]);
+    
+  }, [handleKeyUp]);
 
   return (
     <div className="flex flex-col bg-gray-900 text-white w-full">
@@ -73,12 +80,21 @@ function App() {
             setShowModal,
           }}
         >
-          <div className="flex flex-col items-center mb-4 pb-">
+          <div className="flex flex-col items-center mb-4">
             <Board />
+            {
+              <button 
+              className="bg-red-800 text-white px-4 py-4 mt-2 rounded"
+              onClick={() => {
+                window.location.reload();
+              }}
+              >
+                <FaRedo />
+              </button>
+            }
             <Keyboard />
             <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://wordpam.com/' className='text-blue-400 text-underline' target='_blank'>Wordpam</a>!</p>
             {showModal && <GameOver />}
-
           </div>
         </AppContext.Provider>
       </div>

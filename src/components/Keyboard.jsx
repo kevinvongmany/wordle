@@ -26,7 +26,7 @@ function Keyboard() {
   //   }
   // }, [handleKeyboard])
   return (
-    <div className='mt-6 md:mt-12 lg:mt-12 w-full h-full'>
+    <div className='mt-2 md:mt-6 lg:mt-6 w-full h-full'>
         <div className='flex row justify-center items-center mb-1'>
             {keys1.map((key, i) => {
                 const colour = usedKeys[key];
