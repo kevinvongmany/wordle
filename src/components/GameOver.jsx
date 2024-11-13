@@ -35,19 +35,11 @@ function GameOver() {
         {/* Custom message */}
         <p className="text-lg md:text-2xl my-4 md:my-6">
           <a
-            href="https://twitch.tv/cbro"
+            href="https://www.youtube.com/live/Kp7wpMDFCI4?si=qvzBPc7k0rOMZHIj&t=18849"
             target="_blank"
             className="text-blue-500 hover:underline"
           >
-            Be sure to follow CBRO on Twitch
-          </a>
-          <br />
-          <a
-           href="https://gm.report/"
-           target="_blank"
-           className="text-red-500 hover:underline"
-          >
-            and checkout GM report!
+            Relive this moment from LFG every raid in one stream here!
           </a>
         </p>
 
