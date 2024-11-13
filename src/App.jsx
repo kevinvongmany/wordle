@@ -12,12 +12,13 @@ import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+import { FaRedo } from "react-icons/fa";
 
 import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("CROTA");
+  const [targetWord, setTargetWord] = useState("CBRO");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
@@ -29,6 +30,8 @@ function App() {
     if (isCorrect) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp);
+      localStorage.setItem("gameComplete", true);
+      setGameComplete(true);
     }
   }, [isCorrect]);
 
@@ -36,6 +39,8 @@ function App() {
     if (turn >= maxTurns) {
       setTimeout(() => setShowModal(true), 500);
       window.removeEventListener("keyup", handleKeyUp)
+      localStorage.setItem("gameComplete", true);
+      setGameComplete(true);
     };
   }, [gameComplete, turn, maxTurns])
 
@@ -75,17 +80,14 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4 pb-">
             <Board />
-            <p>Please refresh the page if the keyboard doesn't work!</p>
-            {/* {gameComplete && 
-              <button 
-                className="bg-green-800 text-white px-4 py-2 mt-8 rounded"
-                onClick={() => {
-                  setShowModal(true);
-                }}
+            <button 
+              className="bg-red-800 text-white p-4 mt-2 rounded"
+              onClick={() => {
+                window.location.reload();
+              }}
               >
-                Share results!
+                <FaRedo />
               </button>
-            } */}
             <Keyboard />
             <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://bogdle.com/' className='text-blue-400 text-underline' target='_blank'>Bogdle</a>!</p>
             {showModal && <GameOver />}
