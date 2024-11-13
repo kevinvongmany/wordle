@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import AppContext from '../AppContext'
 import Results from './Results'
-import bogMad from '../assets/bogMad.webp'
 import { IoIosCloseCircle } from "react-icons/io";
 
 
@@ -30,10 +29,6 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className='flex items-center justify-center'>
-          <img src={bogMad} alt='bogMad' className='w-24 md:w-48 mb-4 md:mb-8 ' />
-        </div>
-          <p className='text-lg md:text-2xl mb-5 text-red-500 underline'><a href='https://www.twitch.tv/bogonmydog/clip/ChillyShakingPassionfruitCoolStoryBro-eblAJReurLnBx_ZQ' target='_blank'>TOP ADU--NO CLONE--NO DECOY--OVERLOAD--MY OVERLOAD ROCKET DOESNT WORK! THIS GAME IS <strong className='font-extrabold'>SHIT</strong>!</a></p>
         {/*  */}
         <h1 className="text-2xl md:text-5xl my-4 md:my-6">The word was {targetWord}</h1>
 

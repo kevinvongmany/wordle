@@ -14,12 +14,13 @@ import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import GameOver from "./components/GameOver";
 import Footer from "./components/Footer";
+import { FaRedo } from 'react-icons/fa';
 
 import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("BEPIS");
+  const [targetWord, setTargetWord] = useState("GLADD");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
@@ -79,17 +80,16 @@ function App() {
             setShowModal,
           }}
         >
-          <div className="flex flex-col items-center mb-4 pb-">
+          <div className="flex flex-col items-center mb-4">
             <Board />
-            <p>Please refresh the page if the keyboard doesn't work!</p>
-            {gameComplete && 
+            {
               <button 
-                className="bg-green-800 text-white px-4 py-2 mt-8 rounded"
-                onClick={() => {
-                  setShowModal(true);
-                }}
+              className="bg-red-800 text-white px-4 py-4 mt-2 rounded"
+              onClick={() => {
+                window.location.reload();
+              }}
               >
-                Share results!
+                <FaRedo />
               </button>
             }
             <Keyboard />
