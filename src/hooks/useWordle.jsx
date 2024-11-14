@@ -32,7 +32,10 @@ const useWordle = (solution, newGame, setNewGame) => {
     const savedHistory = localStorage.getItem("history");
     return savedHistory && !newGame ? JSON.parse(savedHistory) : [];
   });
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(() => {
+    const savedIsCorrect = localStorage.getItem("isCorrect");
+    return savedIsCorrect && !newGame ? JSON.parse(savedIsCorrect) : false;
+  });
   const [usedKeys, setUsedKeys] = useState(() => {
     const savedUsedKeys = localStorage.getItem("usedKeys");
     return savedUsedKeys && !newGame ? JSON.parse(savedUsedKeys) : {};
@@ -46,6 +49,10 @@ const useWordle = (solution, newGame, setNewGame) => {
 
   useEffect(() => {
   }, [solution]);
+  
+  useEffect(() => {
+    localStorage.setItem("isCorrect", JSON.stringify(isCorrect));
+  }, [isCorrect]);
 
   useEffect(() => {
     localStorage.setItem("turn", JSON.stringify(turn));
