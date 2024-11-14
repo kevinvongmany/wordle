@@ -33,16 +33,6 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-lg md:text-2xl my-4 md:my-6">
-          <a
-            href="https://www.youtube.com/live/Kp7wpMDFCI4?si=qvzBPc7k0rOMZHIj&t=18849"
-            target="_blank"
-            className="text-blue-500 hover:underline"
-          >
-            Relive this moment from LFG every raid in one stream here!
-          </a>
-        </p>
-
         {/*  */}
         <h1 className="text-2xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
