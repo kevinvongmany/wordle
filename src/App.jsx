@@ -92,7 +92,7 @@ function App() {
             setShowModal,
           }}
         >
-          <div className="flex flex-col items-center mb-4 pb-">
+          <div className="flex flex-col items-center mb-4">
             <Board />
             <button
               className="bg-red-800 text-white p-4 mt-2 rounded"
