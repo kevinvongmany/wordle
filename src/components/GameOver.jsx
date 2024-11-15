@@ -33,17 +33,6 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-xl">
-          Relive this moment by watching Bog defeat{" "}
-          <a
-            className="text-blue-500 underline font-bold"
-            href="https://youtu.be/UYSF864zuQs?t=4146"
-            target="_blank"
-          >
-            10 raid bosses back-to-back without a single wipe
-          </a>
-          !
-        </p>
         {/*  */}
         <h1 className="text-2xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
