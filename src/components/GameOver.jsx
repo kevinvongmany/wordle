@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
+import RonaldDps from "../assets/ronald_dps.png";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -33,6 +34,12 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
+        <div>
+          <p className="text-lg pb-2">Be sure to follow RonaldRaygun70888 on twitch!</p>
+          <p className="text-lg pb-2 text-blue-500 underline"><a href="https://twitch.tv/RonaldRaygun70888" target="_blank">https://twitch.tv/RonaldRaygun70888</a></p>
+          <img src={RonaldDps}>
+          </img>
+        </div>
         {/*  */}
         <h1 className="text-2xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
