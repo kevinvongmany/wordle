@@ -38,18 +38,18 @@ function GameOver() {
         <p className="text-xl m">Congratulations to Chillax_Bro on winning the Wordpam/Bogdle bounty!</p>
         <p className="text-xl my-4">Check out how they won by watching this <a href="https://youtu.be/JD1N5x5wM20" className="text-blue-500 underline" target="_blank">solution video</a>!</p>
         {/*  */}
-        <h1 className="text-2xl md:text-5xl my-4 md:my-6">
+        <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
         </h1>
 
         <div className="flex justify-center space-x-4">
           <a href="https://bogdle.com" target="_blank">
-            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-4xl hover:bg-gray-700 transition duration-300">
+            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-2xl md:text-4xl hover:bg-gray-700 transition duration-300">
               Play Bogdle
             </button>
           </a>
           <a href="https://kevdle.netlify.app/" target="_blank">
-            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-4xl hover:bg-gray-700 transition duration-300">
+            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-2xl md:text-4xl hover:bg-gray-700 transition duration-300">
               Play Kevdle
             </button>
           </a>
