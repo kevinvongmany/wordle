@@ -2,6 +2,10 @@ import React, { useContext } from "react";
 import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
+
+import bogChamp from "../assets/bogChamp.webp";
+import bogSad from "../assets/bogSad.webp";
+
 import RonaldDps from "../assets/ronald_dps.png";
 
 function GameOver() {
@@ -24,7 +28,7 @@ function GameOver() {
           </p>
         </button>
         <h3 className="text-xl md:text-3xl mb-4 md:mb-6">
-          {isCorrect ? "Nice work!" : "You just got bogged up!"}
+          <img src={isCorrect ? bogChamp : bogSad} alt="bogResults" className="w-24 md:w-36 inline-block" />
         </h3>
         {isCorrect && (
           <h2 className="text-xl md:text-3xl mb-6">
@@ -41,18 +45,18 @@ function GameOver() {
           </img>
         </div>
         {/*  */}
-        <h1 className="text-2xl md:text-5xl my-4 md:my-6">
+        <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
         </h1>
 
         <div className="flex justify-center space-x-4">
           <a href="https://wordpam.com" target="_blank">
-            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-4xl hover:bg-gray-700 transition duration-300">
+            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-xl md:text-4xl hover:bg-gray-700 transition duration-300">
               Play Wordpam
             </button>
           </a>
           <a href="https://kevdle.netlify.app/" target="_blank">
-            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-4xl hover:bg-gray-700 transition duration-300">
+            <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-xl md:text-4xl hover:bg-gray-700 transition duration-300">
               Play Kevdle
             </button>
           </a>

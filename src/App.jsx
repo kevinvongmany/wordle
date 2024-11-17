@@ -4,10 +4,8 @@ import { useEffect, useState } from "react";
 
 import AppContext from "./AppContext";
 import { ToastContainer } from 'react-toastify';
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// import { createBoard, generateWordSet } from "./Words";
 import BogNoted from "./assets/bogNoted.gif";
 
 import Board from "./components/Board";
@@ -84,7 +82,7 @@ function App() {
             <Board />
             {
               <button 
-              className="bg-red-800 text-white px-4 py-4 mt-2 rounded"
+              className="bg-red-800 text-white p-2 md:p-4 md:mt-4 rounded"
               onClick={() => {
                 window.location.reload();
               }}
@@ -93,7 +91,7 @@ function App() {
               </button>
             }
             <Keyboard />
-            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://wordpam.com/' className='text-blue-400 text-underline' target='_blank'>Wordpam</a>!</p>
+            <p className="text-center text-sm md:text-lg">Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://wordpam.com/' className='text-blue-400 text-underline' target='_blank'>Wordpam</a>!</p>
             {showModal && <GameOver />}
           </div>
         </AppContext.Provider>
