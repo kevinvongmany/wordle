@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
+import onpamHappy from "../assets/onpamHappy.webp";
+import onpamSad from "../assets/onpamSad.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -23,7 +25,8 @@ function GameOver() {
           </p>
         </button>
         <h3 className="text-xl md:text-3xl mb-4 md:mb-6">
-          {isCorrect ? "Nice work!" : "You just got Onscam'd!"}
+          <img src={isCorrect ? onpamHappy : onpamSad} alt="Onpam" className="w-24 md:w-36 inline-block" />
+          {/* {isCorrect ? "Nice work!" : "You just got Onscam'd!"} */}
         </h3>
         {isCorrect && (
           <h2 className="text-xl md:text-3xl mb-6">
