@@ -33,6 +33,8 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
+        <p className="text-xl m">Congratulations to Chillax_Bro on winning the Wordpam/Bogdle bounty!</p>
+        <p className="text-xl my-4">Check out how they won by watching this <a href="https://youtu.be/JD1N5x5wM20" className="text-blue-500 underline" target="_blank">solution video</a>!</p>
         {/*  */}
         <h1 className="text-2xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
