@@ -78,10 +78,10 @@ function App() {
             setShowModal,
           }}
         >
-          <div className="flex flex-col items-center mb-4 pb-">
+          <div className="flex flex-col items-center mb-4">
             <Board />
             <button 
-              className="bg-red-800 text-white p-4 mt-2 rounded"
+              className="bg-red-800 text-white p-2 md:p-4 md:mt-4 rounded"
               onClick={() => {
                 window.location.reload();
               }}
@@ -89,7 +89,7 @@ function App() {
                 <FaRedo />
               </button>
             <Keyboard />
-            <p>Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://bogdle.com/' className='text-blue-400 text-underline' target='_blank'>Bogdle</a>!</p>
+            <p className="text-center text-sm md:text-lg">Want more Wordle? Try my <a href='https://kevdle.netlify.app/' className='text-blue-400 text-underline' target='_blank'>unthemed version</a> or <a href='https://bogdle.com/' className='text-blue-400 text-underline' target='_blank'>Bogdle</a>!</p>
             {showModal && <GameOver />}
           </div>
         </AppContext.Provider>

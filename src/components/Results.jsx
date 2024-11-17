@@ -7,7 +7,6 @@ import { FaCopy } from "react-icons/fa";
 const Results = () => {
   
   const { guesses, turn, maxTurns } = useContext(AppContext);
-  console.log(guesses);
   
   function generateWordleResult(input) {
     const colorToEmoji = {

@@ -7,7 +7,6 @@ import onpamSad from "../assets/onpamSad.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
-  console.log(isCorrect);
 
   const handleCloseModal = () => {
     setShowModal(false);
