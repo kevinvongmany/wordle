@@ -5,6 +5,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
 
+import onpamDevious from "../assets/onpamDevious.webp";
+
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
 
@@ -35,8 +37,10 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-xl m">Congratulations to Chillax_Bro on winning the Wordpam/Bogdle bounty!</p>
-        <p className="text-xl my-4">Check out how they won by watching this <a href="https://youtu.be/JD1N5x5wM20" className="text-blue-500 underline" target="_blank">solution video</a>!</p>
+        <div className="text-center items-center justify-center flex">
+          <img src={onpamDevious} alt="Onpam after seeing Mara Sov" className="w-48"></img>
+        </div>
+          <p>Onpam after seeing Mara Sov in-game</p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
