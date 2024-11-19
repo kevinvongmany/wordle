@@ -6,7 +6,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
-import RonaldDps from "../assets/ronald_dps.png";
+import happiImg from "../assets/happi.webp";
+
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -39,10 +40,9 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-lg pb-2">Be sure to follow RonaldRaygun70888 on twitch!</p>
-          <p className="text-lg pb-2 text-blue-500 underline"><a href="https://twitch.tv/RonaldRaygun70888" target="_blank">https://twitch.tv/RonaldRaygun70888</a></p>
-          <img src={RonaldDps}>
-          </img>
+          <p className="text-lg pb-2">Be sure to follow Sammie on Twitch, she does AWESOME solo dungeon content!</p>
+          <p className="text-2xl pb-2 text-blue-500 underline font-bold"><a href="https://twitch.tv/diealotcantjump" target="_blank">https://twitch.tv/diealotcantjump</a></p>
+          <img src={happiImg} alt="happi" className="w-24 md:w-36 inline-block" />
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
