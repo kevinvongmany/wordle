@@ -5,7 +5,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
 
-import onpamDevious from "../assets/onpamDevious.webp";
+import samikaParty from "../assets/samikaParty.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -26,7 +26,11 @@ function GameOver() {
           </p>
         </button>
         <h3 className="text-xl md:text-3xl mb-4 md:mb-6">
-          <img src={isCorrect ? onpamHappy : onpamSad} alt="Onpam" className="w-24 md:w-36 inline-block" />
+          <img
+            src={isCorrect ? onpamHappy : onpamSad}
+            alt="Onpam"
+            className="w-24 md:w-36 inline-block"
+          />
           {/* {isCorrect ? "Nice work!" : "You just got Onscam'd!"} */}
         </h3>
         {isCorrect && (
@@ -37,10 +41,21 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="text-center items-center justify-center flex">
-          <img src={onpamDevious} alt="Onpam after seeing Mara Sov" className="w-48"></img>
+        <div className="text-center items-center justify-center flex-row">
+          <p className="text-lg pb-2">
+            Be sure to follow SamiKat on Twitch!
+          </p>
+          <p className="text-2xl pb-2 text-blue-500 underline font-bold">
+            <a href="https://twitch.tv/samikat" target="_blank">
+              twitch.tv/samikat
+            </a>
+          </p>
+          <img
+            src={samikaParty}
+            alt="Samika Party"
+            className="w-24 md:w-36 inline-block"
+          />
         </div>
-          <p>Onpam after seeing Mara Sov in-game</p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}

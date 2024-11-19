@@ -18,7 +18,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("DEVIOUS");
+  const [targetWord, setTargetWord] = useState("SAMIKAT");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
