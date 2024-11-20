@@ -5,7 +5,6 @@ import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
 
-import samikaParty from "../assets/samikaParty.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -41,7 +40,7 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="text-center items-center justify-center flex-row">
+        {/* <div className="text-center items-center justify-center flex-row">
           <p className="text-lg pb-2">
             Be sure to follow SamiKat on Twitch!
           </p>
@@ -55,7 +54,7 @@ function GameOver() {
             alt="Samika Party"
             className="w-24 md:w-36 inline-block"
           />
-        </div>
+        </div> */}
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
