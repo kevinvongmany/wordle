@@ -40,7 +40,7 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-2xl pb-2 text-red-500 underline font-bold"><a href="https://www.youtube.com/watch?v=DuefdObiklo" target="_blank">Relive the moment</a></p>
+          <p className="text-3xl pb-2 text-red-500 underline font-bold"><a href="https://www.youtube.com/watch?v=DuefdObiklo" target="_blank">Relive the moment</a></p>
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
