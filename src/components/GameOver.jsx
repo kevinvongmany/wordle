@@ -43,7 +43,7 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-3xl pb-2">
+          <p className="text-3xl pb-2 text-pink-300">
             Say hi to CharaMads!
           </p>
         </div>
