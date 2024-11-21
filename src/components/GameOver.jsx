@@ -8,7 +8,6 @@ import bogSad from "../assets/bogSad.webp";
 
 import happiImg from "../assets/happi.webp";
 
-
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
   console.log(isCorrect);
@@ -29,7 +28,11 @@ function GameOver() {
           </p>
         </button>
         <h3 className="text-xl md:text-3xl mb-4 md:mb-6">
-          <img src={isCorrect ? bogChamp : bogSad} alt="bogResults" className="w-24 md:w-36 inline-block" />
+          <img
+            src={isCorrect ? bogChamp : bogSad}
+            alt="bogResults"
+            className="w-24 md:w-36 inline-block"
+          />
         </h3>
         {isCorrect && (
           <h2 className="text-xl md:text-3xl mb-6">
@@ -40,7 +43,9 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-3xl pb-2 text-red-500 underline font-bold"><a href="https://www.youtube.com/watch?v=DuefdObiklo" target="_blank">Relive the moment</a></p>
+          <p className="text-3xl pb-2">
+            Say hi to CharaMads!
+          </p>
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
