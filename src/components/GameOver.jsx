@@ -40,21 +40,16 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <div className="text-center items-center justify-center flex-row">
-          <p className="text-lg pb-2">
-            Be sure to follow SamiKat on Twitch!
+        <div className="text-center items-center justify-center flex-row">
+          <p className="text-2xl text-red-500 pb-2">
+            If you're reading this Onpam, you best be working on that video
           </p>
           <p className="text-2xl pb-2 text-blue-500 underline font-bold">
-            <a href="https://twitch.tv/samikat" target="_blank">
-              twitch.tv/samikat
+            <a href="https://www.youtube.com/watch?v=haL4ShH-ME4&list=PLAk0XJ2uijJz9Af62lMrAzkFQP8Oazg1S" target="_blank">
+              For non-Onpams, enjoy the newly ordered VOD playlist here!
             </a>
           </p>
-          <img
-            src={samikaParty}
-            alt="Samika Party"
-            className="w-24 md:w-36 inline-block"
-          />
-        </div> */}
+        </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
