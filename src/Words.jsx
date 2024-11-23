@@ -15,18 +15,6 @@ export const createBoard = (rows, cols) => {
 };
 
 export const generateWordSet = (wordLength) => {
-    // switch (wordLength) {
-    //     case 4:
-    //         return new Set(wordsFour);
-    //     case 5:
-    //         return new Set(wordsFive);
-    //     case 6:
-    //         return new Set(wordsSix);
-    //     case 7:
-    //         return new Set(wordsSeven);
-    //     default:
-    //         return new Set();
-    // }
     const wordset = [
         ...engWords10,
         ...engWords20,
@@ -35,6 +23,7 @@ export const generateWordSet = (wordLength) => {
         ...engWords50,
         ...engWords55,
         ...engWords60,
+        ...engWords70,
         ...customWords
     ];
     return new Set(wordset.filter(word => word.length === wordLength));
