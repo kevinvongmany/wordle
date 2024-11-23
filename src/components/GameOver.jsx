@@ -40,7 +40,7 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="text-center items-center justify-center flex-row">
+        {/* <div className="text-center items-center justify-center flex-row">
           <p className="text-2xl text-red-500 pb-2">
             If you're reading this Onpam, you best be working on that video
           </p>
@@ -49,7 +49,7 @@ function GameOver() {
               For non-Onpams, enjoy the newly ordered VOD playlist here!
             </a>
           </p>
-        </div>
+        </div> */}
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
