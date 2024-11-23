@@ -43,9 +43,19 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-3xl pb-2 text-pink-300">
-            Say hi to CharaMads!
+          <p className="text-3xl pb-2 text-purple-500">
+            GuapoGary streams high-level trials gameplay! 
           </p>
+          <p className="text-3xl pb-2 text-purple-500">
+            Follow him and check him out live here:
+          </p>
+          <p  className="text-3xl pb-2 text-blue-500 underline">
+            <a
+            href="https://www.twitch.tv/guapogary"
+            target="_blank"
+            rel="noreferrer"
+            >twitch.tv/guapogary</a>
+            </p>
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
