@@ -40,16 +40,24 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <div className="text-center items-center justify-center flex-row">
-          <p className="text-2xl text-red-500 pb-2">
-            If you're reading this Onpam, you best be working on that video
+        <div className="text-center items-center justify-center flex-row">
+          <p className="text-2xl text-purple-500 pb-2">
+            Be sure to follow Khan on Twitch and pray for a new CPU arriving soon!
           </p>
           <p className="text-2xl pb-2 text-blue-500 underline font-bold">
-            <a href="https://www.youtube.com/watch?v=haL4ShH-ME4&list=PLAk0XJ2uijJz9Af62lMrAzkFQP8Oazg1S" target="_blank">
-              For non-Onpams, enjoy the newly ordered VOD playlist here!
+            <a href="https://twitch.tv/khan" target="_blank">
+              twitch.tv/khan
             </a>
           </p>
-        </div> */}
+          <p className="text-2xl text-red-500 pb-2">
+            Also check out his AWESOME D2 x Arcane collab music video!
+          </p>
+          <p className="text-2xl pb-2 text-blue-500 underline font-bold">
+            <a href="https://youtu.be/AcWr3eCCCYk" target="_blank">
+            Destiny 2 x Arcane | Paint the Town Blue | Music Video | #MOTW
+            </a>
+          </p>
+        </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
