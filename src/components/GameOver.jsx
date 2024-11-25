@@ -43,18 +43,15 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-3xl pb-2 text-purple-500">
-            GuapoGary streams high-level trials gameplay! 
-          </p>
-          <p className="text-3xl pb-2 text-purple-500">
-            Follow him and check him out live here:
+          <p className="text-3xl pb-2 text-red-500">
+            Check out the WORLD'S FIRST solo master Nezarec clear here:
           </p>
           <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
-            href="https://www.twitch.tv/guapogary"
+            href="https://www.youtube.com/watch?v=IqwSAxevDDA"
             target="_blank"
             rel="noreferrer"
-            >twitch.tv/guapogary</a>
+            >www.youtube.com/watch?v=IqwSAxevDDA</a>
             </p>
         </div>
         {/*  */}
