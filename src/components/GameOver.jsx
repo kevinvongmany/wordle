@@ -41,10 +41,10 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="text-center items-center justify-center flex-row">
-          <p className="text-2xl text-purple-500 pb-2">
-            Be sure to follow Khan on Twitch and pray for a new CPU arriving soon!
+          <p className="text-2xl text-blue-500 underline pb-2">
+            <a href="https://youtu.be/-Ivi9BebqLw?list=PLAk0XJ2uijJz9Af62lMrAzkFQP8Oazg1S&t=1100" target="_blank">mmmmmmmmmmmmm</a>
           </p>
-          <p className="text-2xl pb-2 text-blue-500 underline font-bold">
+          {/* <p className="text-2xl pb-2 text-blue-500 underline font-bold">
             <a href="https://twitch.tv/khan" target="_blank">
               twitch.tv/khan
             </a>
@@ -56,7 +56,7 @@ function GameOver() {
             <a href="https://youtu.be/AcWr3eCCCYk" target="_blank">
             Destiny 2 x Arcane | Paint the Town Blue | Music Video | #MOTW
             </a>
-          </p>
+          </p> */}
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
