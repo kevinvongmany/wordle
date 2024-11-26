@@ -43,16 +43,16 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-3xl pb-2 text-red-500">
-            Check out the WORLD'S FIRST solo master Nezarec clear here:
+          <p className="text-3xl pb-2 text-blue-400 font-bold">
+            Say hi to <span className="text-white">Sirlaurens</span>! 🤰
           </p>
-          <p  className="text-3xl pb-2 text-blue-500 underline">
+          {/* <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
             href="https://www.youtube.com/watch?v=IqwSAxevDDA"
             target="_blank"
             rel="noreferrer"
             >www.youtube.com/watch?v=IqwSAxevDDA</a>
-            </p>
+            </p> */}
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
