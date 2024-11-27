@@ -41,8 +41,8 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="text-center items-center justify-center flex-row">
-          <p className="text-2xl text-blue-500 underline pb-2">
-            <a href="https://youtu.be/-Ivi9BebqLw?list=PLAk0XJ2uijJz9Af62lMrAzkFQP8Oazg1S&t=1100" target="_blank">mmmmmmmmmmmmm</a>
+          <p className="text-3xl text-violet-600 pb-2">
+            I'm on adclear kwtd
           </p>
           {/* <p className="text-2xl pb-2 text-blue-500 underline font-bold">
             <a href="https://twitch.tv/khan" target="_blank">
