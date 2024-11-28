@@ -80,7 +80,7 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4">
             <Board />
-            <p className="text-center text-sm md:text-xl">Happy Thanksgiving American Bogmmunity! From the Australian bogmmunity 🙂</p>
+            <p className="text-center text-sm md:text-xl">Happy Thanksgiving Bogmericans! From the Australian bogmmunity 🙂</p>
             {
               <button 
               className="bg-red-800 text-white p-2 md:p-4 md:mt-4 rounded"
