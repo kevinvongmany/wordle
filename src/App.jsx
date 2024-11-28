@@ -6,7 +6,7 @@ import AppContext from "./AppContext";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import onpamNoted from "./assets/onpamNoted.webp";
+import onpamNoted from "./assets/onpamNotedThanksgiving.png";
 
 import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
@@ -18,7 +18,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("ADCLEAR");
+  const [targetWord, setTargetWord] = useState("QURLY");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(localStorage.getItem("gameComplete") || false);
@@ -56,13 +56,13 @@ function App() {
   }, [handleKeyUp]);
 
   return (
-    <div className="flex flex-col bg-gray-900 text-white w-full">
-      <nav className="fixed top-0 flex p-3 bg-gray-800 w-full text-center justify-center items-center border-b">
-        <h1 className="text-center text-3xl font-bold">Wordpam</h1>
+    <div className="flex flex-col text-white w-full" style={{ backgroundColor: "	#633f21" }}>
+      <nav className="fixed top-0 flex p-3 w-full text-center justify-center items-center border-b" style={{ backgroundColor: "#511f16" }}>
+        <h1 className="text-center text-3xl font-bold">🦃 Wordpam 🦃</h1>
       </nav>
       <div className="min-h-screen px-3 py-12">
         <div className="mt-4 flex justify-center">
-          <img src={onpamNoted} alt="Onpam Noted" className="flex items-center mb-5 w-12 md:w-24" />
+          <img src={onpamNoted} alt="Onpam Noted" className="flex items-center mb-5 w-24 md:w-48" />
           </div>
         <AppContext.Provider
           value={{ 
@@ -80,6 +80,7 @@ function App() {
         >
           <div className="flex flex-col items-center mb-4">
             <Board />
+            <p className="text-center text-sm md:text-xl">Happy Thanksgiving <span className="font-bold">Onpam</span>ericans! From the Australian community 🙂</p>
             <button 
               className="bg-red-800 text-white p-2 md:p-4 md:mt-4 rounded"
               onClick={() => {
