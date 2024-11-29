@@ -6,7 +6,6 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
-import happiImg from "../assets/happi.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -43,9 +42,9 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <p className="text-3xl pb-2 text-red-400 font-bold">
+          {/* <p className="text-3xl pb-2 text-red-400 font-bold">
             DOOD-uh
-          </p>
+          </p> */}
           {/* <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
             href="https://www.youtube.com/watch?v=IqwSAxevDDA"
