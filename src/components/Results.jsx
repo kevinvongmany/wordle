@@ -13,7 +13,7 @@ const Results = () => {
     const colorToEmoji = {
       green: "🟩",
       yellow: "🟨",
-      grey: "🟫",
+      grey: "⬛",
       undefined: "",
     };
 

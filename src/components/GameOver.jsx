@@ -5,8 +5,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
-import cupvala from "../assets/cupvala.png";
 
+import happiImg from "../assets/happi.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -43,17 +43,16 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          {/* <p className="text-3xl pb-2 text-red-400 font-bold">
+          <p className="text-3xl pb-2 text-red-400 font-bold">
             DOOD-uh
-          </p> */}
-          <img src={cupvala} alt="cupvala" className="w-64 md:w-128 inline-block" />
-          <p  className="text-3xl pb-2 text-blue-500 underline">
+          </p>
+          {/* <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
-            href="https://www.youtube.com/watch?v=wqjzim1lM1E"
+            href="https://www.youtube.com/watch?v=IqwSAxevDDA"
             target="_blank"
             rel="noreferrer"
-            >I can't put down the cup. I can't put down the cup.</a>
-            </p>
+            >www.youtube.com/watch?v=IqwSAxevDDA</a>
+            </p> */}
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
