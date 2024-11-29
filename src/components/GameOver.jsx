@@ -42,14 +42,14 @@ function GameOver() {
         {/* Custom message */}
         <div className="text-center items-center justify-center flex-row">
           <p className="text-3xl text-violet-600 pb-2">
-            Check out QurlyFry on Twitch (irregular schedule)!<br/>He's also just started a Hollow Knight playthrough ♥
+            I'm on adclear kwtd
           </p>
-          <p className="text-2xl pb-2 text-blue-500 underline font-bold">
-            <a href="https://twitch.tv/qurlyfry" target="_blank">
-              twitch.tv/qurlyfry
+          {/* <p className="text-2xl pb-2 text-blue-500 underline font-bold">
+            <a href="https://twitch.tv/khan" target="_blank">
+              twitch.tv/khan
             </a>
           </p>
-          {/* <p className="text-2xl text-red-500 pb-2">
+          <p className="text-2xl text-red-500 pb-2">
             Also check out his AWESOME D2 x Arcane collab music video!
           </p>
           <p className="text-2xl pb-2 text-blue-500 underline font-bold">
