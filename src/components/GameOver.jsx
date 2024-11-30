@@ -40,16 +40,6 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="text-center items-center justify-center flex-row">
-          <p className="text-3xl text-violet-600 pb-2">
-            Check out ATP on Twitch!
-          </p>
-          <p className="text-2xl pb-2 text-blue-500 underline font-bold">
-            <a href="https://twitch.tv/All_The_Players" target="_blank">
-              twitch.tv/All_The_Players
-            </a>
-          </p>
-        </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
