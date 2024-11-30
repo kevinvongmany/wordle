@@ -5,7 +5,7 @@ import { FaBackspace } from "react-icons/fa";
 
 function Key({ keyValue, colour, isLarge, used }) {
   const { handleKeyUp, gameComplete } = useContext(AppContext);
-
+  
   const handleClick = (e) => {
     if (gameComplete) return;
     const key = e.currentTarget.dataset.key;

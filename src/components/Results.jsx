@@ -14,6 +14,7 @@ const Results = () => {
       green: "🟩",
       yellow: "🟨",
       grey: "⬛",
+      red: "🟥",
       undefined: "",
     };
 
@@ -25,6 +26,9 @@ const Results = () => {
       }
       let rowResult = "";
       row.forEach((cell) => {
+        if (cell?.hardMode && cell?.colour === "grey") {
+          cell.colour = "red";
+        }
         rowResult += colorToEmoji[cell?.colour];
       });
       result.push(rowResult);
