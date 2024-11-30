@@ -41,6 +41,10 @@ const useWordle = (solution, newGame, setNewGame) => {
     return savedUsedKeys && !newGame ? JSON.parse(savedUsedKeys) : {};
   });
   const [wordSet, setWordSet] = useState(new Set());
+  const [hardMode, setHardMode] = useState(() => {
+    const savedHardMode = localStorage.getItem("hardMode");
+    return savedHardMode && !newGame ? JSON.parse(savedHardMode) : false
+  });
 
   useEffect(() => {
     const words = generateWordSet(solution.length);
@@ -70,10 +74,10 @@ const useWordle = (solution, newGame, setNewGame) => {
     localStorage.setItem("usedKeys", JSON.stringify(usedKeys));
   }, [usedKeys]);
 
-  const formatGuess = () => {
+  const formatGuess = (hardMode) => {
     let solutionArray = [...solution];
     let guessArray = [...currentGuess].map((letter, i) => {
-      return { key: letter.toLocaleUpperCase(), colour: "grey" };
+      return { key: letter.toLocaleUpperCase(), colour: "grey", hardMode };
     });
 
     guessArray.forEach((letter, i) => {
@@ -96,6 +100,7 @@ const useWordle = (solution, newGame, setNewGame) => {
   };
 
   const addNewGuess = (guessData) => {
+    console.log(hardMode);
     if (currentGuess.toUpperCase() === solution) {
       setIsCorrect(true);
     }
@@ -129,8 +134,19 @@ const useWordle = (solution, newGame, setNewGame) => {
     setCurrentGuess("");
     
   };
+
+  const validateHardMode = (guess) => {
+    const requiredLetters = Object.keys(usedKeys).filter((key) => usedKeys[key] !== "grey");
+    console.log("Required letters are: ", requiredLetters);
+    const guessArray = [...guess];
+    const isGuessValid = requiredLetters.every((letter) => {
+      return guessArray.includes(letter);
+    });
+    return !isGuessValid;
+  }
   
   const handleKeyUp = ({ key }) => {
+    const hardMode = localStorage.getItem("hardMode") == "true" ? true : false;
     if (key === "Enter") {
       if (turn > maxTurns) {
         return;
@@ -148,9 +164,15 @@ const useWordle = (solution, newGame, setNewGame) => {
         toast.warning("That is not a valid word");
         return;
       }
+      console.log(hardMode);
+      console.log(typeof hardMode);
+      if (hardMode && validateHardMode(currentGuess)) {
+        toast.warning("Invalid Cammie Mode guess");
+        return;
+      }
       localStorage.setItem("solution", solution);
       setNewGame(false);
-      const guess = formatGuess();
+      const guess = formatGuess(hardMode);
       addNewGuess(guess);
     }
 
@@ -166,7 +188,7 @@ const useWordle = (solution, newGame, setNewGame) => {
     }
   };
 
-  return { turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp, history };
+  return { turn, currentGuess, guesses, isCorrect, maxTurns, usedKeys, handleKeyUp, history, setHardMode, hardMode };
 };
 
 export default useWordle;

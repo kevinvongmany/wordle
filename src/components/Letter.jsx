@@ -2,6 +2,9 @@ import { useContext, useEffect } from "react";
 import AppContext from "../AppContext";
 
 const Letter = ({letter, colour=""}) => {
+  if (colour === "red" ) {
+    colour = "grey";
+  }
 
   return (
     <div
