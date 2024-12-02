@@ -9,6 +9,7 @@ const Header = ({ title }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleToggleHardMode = () => {
+    document.activeElement.blur();
     setHardMode(!hardMode);
     localStorage.setItem("hardMode", !hardMode);
   };
