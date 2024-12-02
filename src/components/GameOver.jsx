@@ -6,6 +6,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
+import tclordImage from "../assets/tclord.png";
+
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -42,6 +44,7 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
+          <img src={tclordImage}></img>
           {/* <p className="text-3xl pb-2 text-red-400 font-bold">
             DOOD-uh
           </p> */}
