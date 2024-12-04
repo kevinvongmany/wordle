@@ -40,14 +40,13 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-xl md:text-3xl mt-4 md:mt-6">
-          blights blights blights blights blights blights blights blights blights
-          <br />
-        <a
+        <p className="text-xl md:text-3xl mt-4 md:mt-6 text-red-600">
+          pepeja TUAH clapp on that thang
+        {/* <a
           href="https://youtu.be/yZKLDY40woM?t=144"
           target="_blank"
           className="text-blue-500 hover:underline"
-        >Playing Bingo in LFG Raids #12: The Silent Movie</a>
+        >Playing Bingo in LFG Raids #12: The Silent Movie</a> */}
         </p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
