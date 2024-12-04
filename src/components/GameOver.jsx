@@ -6,7 +6,6 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
-import tclordImage from "../assets/tclord.png";
 
 
 function GameOver() {
@@ -44,17 +43,16 @@ function GameOver() {
 
         {/* Custom message */}
         <div>
-          <img src={tclordImage}></img>
-          {/* <p className="text-3xl pb-2 text-red-400 font-bold">
-            DOOD-uh
-          </p> */}
-          {/* <p  className="text-3xl pb-2 text-blue-500 underline">
+          <p className="text-3xl pb-2 text-purple-400 font-bold">
+            Check out ashex999's streams at:
+          </p>
+          <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
-            href="https://www.youtube.com/watch?v=IqwSAxevDDA"
+            href="https://www.twitch.tv/ashex999"
             target="_blank"
             rel="noreferrer"
-            >www.youtube.com/watch?v=IqwSAxevDDA</a>
-            </p> */}
+            >https://www.twitch.tv/ashex999</a>
+            </p>
         </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
