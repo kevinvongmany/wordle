@@ -10,7 +10,7 @@ const Results = () => {
   
   function generateWordleResult(input) {
     const colorToEmoji = {
-      green: "🟦",
+      green: "🟩",
       yellow: "🟨",
       grey: "⬛",
       red: "🟥",

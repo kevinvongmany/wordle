@@ -40,20 +40,17 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-xl md:text-3xl mt-4 md:mt-6 text-violet-300">
-          <span className="text-lg md:text-xl">While you're here... 
-            <br/>
-            Check out and vote for Khan's awesome music video submission for MOTW!</span>
-          <br />
-        <a
-          href="https://www.bungie.net/en/Community/Detail?itemId=264464876"
+        <p className="text-xl md:text-3xl mt-4 md:mt-6 text-red-600">
+          pepeja TUAH clapp on that thang
+        {/* <a
+          href="https://youtu.be/yZKLDY40woM?t=144"
           target="_blank"
           className="text-blue-500 hover:underline"
-        >Destiny 2 x Arcane | Paint the Town Blue | Music Video</a>
+        >Playing Bingo in LFG Raids #12: The Silent Movie</a> */}
         </p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
-          The word was <span className="text-blue-600">{targetWord}</span>
+          The word was {targetWord}
         </h1>
 
         <div className="flex justify-center space-x-4">
