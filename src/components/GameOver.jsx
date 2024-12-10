@@ -42,7 +42,7 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div>
+        {/* <div>
           <p className="text-3xl pb-2 text-purple-400 font-bold">
             Check out ashex999's streams at:
           </p>
@@ -53,7 +53,7 @@ function GameOver() {
             rel="noreferrer"
             >https://www.twitch.tv/ashex999</a>
             </p>
-        </div>
+        </div> */}
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
