@@ -42,10 +42,10 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
+        <p className="text-3xl pb-2 text-white italic">
+          <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
+        </p>
         {/* <div>
-          <p className="text-3xl pb-2 text-purple-400 font-bold">
-            Check out ashex999's streams at:
-          </p>
           <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
             href="https://www.twitch.tv/ashex999"
