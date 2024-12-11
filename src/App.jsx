@@ -19,7 +19,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("CHRISP");
+  const [targetWord, setTargetWord] = useState("PHASMO");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(
