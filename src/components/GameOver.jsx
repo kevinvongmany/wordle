@@ -40,7 +40,7 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <p className="text-xl md:text-3xl mt-4 md:mt-6 text-red-600">
+        {/* <p className="text-xl md:text-3xl mt-4 md:mt-6">
           pepeja TUAH clapp on that thang
         <a
           href="https://youtu.be/yZKLDY40woM?t=144"
