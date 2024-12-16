@@ -4,7 +4,7 @@ import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
-
+import onpamGift from "../assets/onpamGift.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -49,6 +49,24 @@ function GameOver() {
         >Playing Bingo in LFG Raids #12: The Silent Movie</a>
         </p> */}
         {/*  */}
+        <p className="text-xl md:text-3xl mt-4 md:mt-6 text-violet-300">
+          Sub to{" "}
+          <a
+            href="https://twitch.tv/onpam"
+            target="_blank"
+            className="text-blue-500 hover:underline"
+          >
+            twitch.tv/onpam
+          </a>{" "}
+          and spam these emotes in other channels for max profit
+        </p>
+        <div className="flex justify-center">
+          <img
+            src={onpamGift}
+            alt="Onpam Gift"
+            className="w-24 md:w-36 mt-4 md:mt-6"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
         </h1>
