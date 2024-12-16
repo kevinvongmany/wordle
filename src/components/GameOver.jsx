@@ -42,9 +42,9 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-3xl pb-2 text-white italic">
+        {/* <p className="text-3xl pb-2 text-white italic">
           <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
-        </p>
+        </p> */}
         {/* <div>
           <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
