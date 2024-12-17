@@ -40,17 +40,16 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <p className="text-xl md:text-3xl mt-4 md:mt-6">
-          pepeja TUAH clapp on that thang
+        <p className="text-xl md:text-3xl mt-4 md:mt-6">
         <a
-          href="https://youtu.be/yZKLDY40woM?t=144"
+          href="https://www.youtube.com/watch?v=B4usutzJMfM"
           target="_blank"
           className="text-blue-500 hover:underline"
-        >Playing Bingo in LFG Raids #12: The Silent Movie</a>
-        </p> */}
+        >King's Fall Duo Master Oryx (Season of The Plunder) [Titans]</a>
+        </p>
         {/*  */}
         <p className="text-xl md:text-3xl mt-4 md:mt-6 text-violet-300">
-          Sub to{" "}
+          Also don't forget to sub to{" "}
           <a
             href="https://twitch.tv/onpam"
             target="_blank"

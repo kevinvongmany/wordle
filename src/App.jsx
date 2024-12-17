@@ -18,7 +18,7 @@ import { FaRedo } from "react-icons/fa";
 import useWordle from "./hooks/useWordle";
 
 function App() {
-  const [targetWord, setTargetWord] = useState("GIFT");
+  const [targetWord, setTargetWord] = useState("DUOORYX");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(
