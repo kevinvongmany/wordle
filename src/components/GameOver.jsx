@@ -54,11 +54,18 @@ function GameOver() {
             >https://www.twitch.tv/epsilontheai</a>
             </p>
         </div>
+        <p className="text-3xl pb-2 text-white">
+        🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span> ❤🎄🎅🏼
+          <br/>
+            from the Australian Bogmmunity 
+        </p>
+        <p className="text-2xl pb-2 text-white">
+            Thank you all for playing!
+        </p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
         </h1>
-
         <div className="flex justify-center space-x-4">
           <a href="https://wordpam.com" target="_blank">
             <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-xl md:text-4xl hover:bg-gray-700 transition duration-300">

@@ -6,7 +6,7 @@ import AppContext from "./AppContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import BogNoted from "./assets/bogNoted.gif";
+import bogMas from "./assets/bogMas.png";
 
 import Header from "./components/Header";
 import Board from "./components/Board";
@@ -68,7 +68,7 @@ function App() {
   }, [handleKeyUp]);
 
   return (
-    <div className="flex flex-col bg-gray-900 text-white w-full">
+    <div className="flex flex-col bg-green-950 text-white w-full">
       <AppContext.Provider
         value={{
           currentGuess,
@@ -89,7 +89,7 @@ function App() {
         <div className="min-h-screen px-3 py-12">
           <div className="mt-12 flex justify-center">
             <img
-              src={BogNoted}
+              src={bogMas}
               alt="Bog Noted"
               className="flex items-center mb-5 w-12 md:w-24"
             />
