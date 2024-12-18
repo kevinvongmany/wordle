@@ -12,7 +12,7 @@ const Results = () => {
     const colorToEmoji = {
       green: "🟩",
       yellow: "🟨",
-      grey: "⬛",
+      grey: "⬜",
       red: "🟥",
       undefined: "",
     };
@@ -37,7 +37,7 @@ const Results = () => {
   }
 
   const handleCopy = () => {
-    const shareString = `Wordpam score ${turn}/${maxTurns}\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://wordpam.com/`;
+    const shareString = `Wordpam score ${turn}/${maxTurns}\n\n${generateWordleResult(guesses).join("\n")}\n\nhttps://wordpam.com/  🎄 🎅`;
     copy(shareString);
     toast.success("Copied to clipboard!");
   }

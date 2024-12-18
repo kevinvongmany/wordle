@@ -6,7 +6,7 @@ import AppContext from "./AppContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import onpamNoted from "./assets/onpamNoted.webp";
+import onpamNoted from "./assets/onpamNotedXmas.png";
 
 import Header from "./components/Header";
 import Board from "./components/Board";
@@ -67,7 +67,7 @@ function App() {
   }, [handleKeyUp]);
 
   return (
-    <div className="flex flex-col bg-gray-900 text-white w-full">
+    <div className="flex flex-col bg-green-950 text-white w-full">
       <AppContext.Provider
         value={{
           currentGuess,

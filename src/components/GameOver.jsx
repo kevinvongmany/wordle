@@ -41,16 +41,13 @@ function GameOver() {
 
         {/* Custom message */}
         {/*  */}
-        <p className="text-xl md:text-3xl mt-4 md:mt-6 text-violet-300">
-          Also don't forget to sub to{" "}
-          <a
-            href="https://twitch.tv/onpam"
-            target="_blank"
-            className="text-blue-500 hover:underline"
-          >
-            twitch.tv/onpam
-          </a>{" "}
-          and spam these emotes in other channels for max profit
+        <p className="text-3xl pb-2 text-white">
+        🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span> ❤🎄🎅🏼
+          <br/>
+            from the Australian community - Wilfred 
+        </p>
+        <p className="text-2xl pb-2 text-white">
+            Thank you all for playing!
         </p>
         <div className="flex justify-center">
           <img
