@@ -45,15 +45,15 @@ function GameOver() {
         {/* <p className="text-3xl pb-2 text-white italic">
           <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
         </p> */}
-        {/* <div>
+        <div>
           <p  className="text-3xl pb-2 text-blue-500 underline">
             <a
-            href="https://www.twitch.tv/ashex999"
+            href="https://www.twitch.tv/epsilontheai"
             target="_blank"
             rel="noreferrer"
-            >https://www.twitch.tv/ashex999</a>
+            >https://www.twitch.tv/epsilontheai</a>
             </p>
-        </div> */}
+        </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
