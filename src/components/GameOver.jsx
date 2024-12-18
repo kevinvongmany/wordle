@@ -40,13 +40,6 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-xl md:text-3xl mt-4 md:mt-6">
-        <a
-          href="https://www.youtube.com/watch?v=B4usutzJMfM"
-          target="_blank"
-          className="text-blue-500 hover:underline"
-        >King's Fall Duo Master Oryx (Season of The Plunder) [Titans]</a>
-        </p>
         {/*  */}
         <p className="text-xl md:text-3xl mt-4 md:mt-6 text-violet-300">
           Also don't forget to sub to{" "}
