@@ -6,8 +6,6 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
-
-
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
   console.log(isCorrect);
@@ -46,22 +44,27 @@ function GameOver() {
           <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
         </p> */}
         <div>
-          <p  className="text-3xl pb-2 text-blue-500 underline">
-            <a
-            href="https://www.twitch.tv/epsilontheai"
-            target="_blank"
-            rel="noreferrer"
-            >https://www.twitch.tv/epsilontheai</a>
-            </p>
+          <p className="text-3xl pb-2 text-white">
+            Checkout Strider's{" "}
+            <span className="text-3xl pb-2 text-blue-500 underline">
+              <a
+                href="https://www.twitch.tv/pacificstrider"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Twitch channel
+              </a>
+            </span>{" "}
+            where he is streaming Ability Only, Ghosts of the Deep!
+          </p>
         </div>
         <p className="text-3xl pb-2 text-white">
-        🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span> ❤🎄🎅🏼
-          <br/>
-            from the Australian Bogmmunity 
+          🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span>{" "}
+          ❤🎄🎅🏼
+          <br />
+          from the Australian Bogmmunity
         </p>
-        <p className="text-2xl pb-2 text-white">
-            Thank you all for playing!
-        </p>
+        <p className="text-2xl pb-2 text-white">Thank you all for playing!</p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was {targetWord}
