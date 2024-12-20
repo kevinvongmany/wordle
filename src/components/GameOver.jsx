@@ -43,7 +43,7 @@ function GameOver() {
         <p className="text-2xl pb-6 text-white">
           Checkout Mariomonkey's stream here!
           <br/>
-          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/mariomonkey" target="_blank">twitch.tv/mariomonk</a></span> 
+          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/mariomonk" target="_blank">twitch.tv/mariomonk</a></span> 
           <br/>
           Currently attempting Solo Flawless Deep Stone Crypt!
         </p>
