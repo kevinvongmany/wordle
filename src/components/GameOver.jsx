@@ -43,7 +43,7 @@ function GameOver() {
         {/* <p className="text-3xl pb-2 text-white italic">
           <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
         </p> */}
-        <div>
+        {/* <div>
           <p className="text-3xl pb-2 text-white">
             Checkout Strider's{" "}
             <span className="text-3xl pb-2 text-blue-500 underline">
@@ -57,7 +57,7 @@ function GameOver() {
             </span>{" "}
             where he is streaming Ability Only, Ghosts of the Deep!
           </p>
-        </div>
+        </div> */}
         <p className="text-3xl pb-2 text-white">
           🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span>{" "}
           ❤🎄🎅🏼
