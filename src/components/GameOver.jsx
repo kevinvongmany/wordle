@@ -43,21 +43,12 @@ function GameOver() {
         {/* <p className="text-3xl pb-2 text-white italic">
           <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
         </p> */}
-        {/* <div>
-          <p className="text-3xl pb-2 text-white">
-            Checkout Strider's{" "}
-            <span className="text-3xl pb-2 text-blue-500 underline">
-              <a
-                href="https://www.twitch.tv/pacificstrider"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Twitch channel
-              </a>
-            </span>{" "}
-            where he is streaming Ability Only, Ghosts of the Deep!
-          </p>
-        </div> */}
+        <p className="text-2xl pb-6 text-white">
+          Follow TheSnazzzyRock!
+          <br/>
+          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/thesnazzzyrock" target="_blank">twitch.tv/thesnazzzyrock</a></span> 
+          <br/>
+        </p>
         <p className="text-3xl pb-2 text-white">
           🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span>{" "}
           ❤🎄🎅🏼
