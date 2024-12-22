@@ -40,13 +40,12 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <p className="text-2xl pb-6 text-white">
-          Checkout Mariomonkey's stream here!
+        <p className="text-2xl pb-6 text-white">
+          Follow TheSnazzzyRock!
           <br/>
-          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/mariomonk" target="_blank">twitch.tv/mariomonk</a></span> 
+          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/thesnazzzyrock" target="_blank">twitch.tv/thesnazzzyrock</a></span> 
           <br/>
-          Currently attempting Solo Flawless Deep Stone Crypt!
-        </p> */}
+        </p>
         {/*  */}
         <p className="text-3xl pb-6 text-white">
         🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span> ❤🎄🎅🏼
