@@ -40,12 +40,11 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <p className="text-2xl pb-6 text-white">
-          Follow TheSnazzzyRock!
+        <p className="text-2xl pb-6 text-white">
           <br/>
-          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/thesnazzzyrock" target="_blank">twitch.tv/thesnazzzyrock</a></span> 
+          <span className="text-blue-400 underline text-4xl"><a href="https://www.youtube.com/watch?v=8DKh0bQsE60&list=PLBvXndSVSr_n1uGldRl6brzrWpTxssA68" target="_blank">A Charlie Brown Christmas</a></span> 
           <br/>
-        </p> */}
+        </p>
         {/*  */}
         <p className="text-3xl pb-6 text-white">
         🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span> ❤🎄🎅🏼
