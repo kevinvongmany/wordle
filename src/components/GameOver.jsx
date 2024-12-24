@@ -3,7 +3,7 @@ import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 
-import bogChamp from "../assets/bogChamp.webp";
+import bogChamp from "../assets/bogchamp-mas.png";
 import bogSad from "../assets/bogSad.webp";
 
 function GameOver() {
@@ -43,14 +43,14 @@ function GameOver() {
         {/* <p className="text-3xl pb-2 text-white italic">
           <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
         </p> */}
-        <p className="text-2xl pb-6 text-white">
+        {/* <p className="text-2xl pb-6 text-white">
           Follow TheSnazzzyRock!
           <br/>
           <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/thesnazzzyrock" target="_blank">twitch.tv/thesnazzzyrock</a></span> 
           <br/>
-        </p>
+        </p> */}
         <p className="text-3xl pb-2 text-white">
-          🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span>{" "}
+          🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Bogmas!</span>{" "}
           ❤🎄🎅🏼
           <br />
           from the Australian Bogmmunity
@@ -58,7 +58,7 @@ function GameOver() {
         <p className="text-2xl pb-2 text-white">Thank you all for playing!</p>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
-          The word was {targetWord}
+          The word was <span className="text-red-600">{targetWord}</span>
         </h1>
         <div className="flex justify-center space-x-4">
           <a href="https://wordpam.com" target="_blank">
