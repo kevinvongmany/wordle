@@ -40,31 +40,18 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-2xl pb-6 text-white">
-          <br/>
-          <span className="text-blue-400 underline text-4xl"><a href="https://www.youtube.com/watch?v=8DKh0bQsE60&list=PLBvXndSVSr_n1uGldRl6brzrWpTxssA68" target="_blank">A Charlie Brown Christmas</a></span> 
-          <br/>
+        <p className="text-3xl pb-6 text-white">
+          Subscribe to <span className="text-red-600 underline"><a href="https://www.youtube.com/@silken8184" target="_blank" >Silken</a></span>'s channel
+        </p>
+        <p className="text-6xl pb-6 text-white">
+          🕯
         </p>
         {/*  */}
         <p className="text-3xl pb-6 text-white">
-        🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Christmas!</span> ❤🎄🎅🏼
+        🕯🕯🕯🕯 <span className="text-blue-600 text-4xl">Happy Hanukkah!</span> 🕯🕯🕯🕯
           <br/>
             from the Australian community - Wilfred 
         </p>
-        <p className="text-2xl pb-2 text-white">
-            Thank you all for playing!
-        </p>
-        <div className="flex justify-center">
-          <img
-            src={onpamGift}
-            alt="Onpam Gift"
-            className="w-24 md:w-36 mt-4 md:mt-6"
-          />
-        </div>
-        <h1 className="text-4xl md:text-5xl my-4 md:my-6">
-          The word was {targetWord}
-        </h1>
-
         <div className="flex justify-center space-x-4">
           <a href="https://bogdle.com" target="_blank">
             <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-2xl md:text-4xl hover:bg-gray-700 transition duration-300">

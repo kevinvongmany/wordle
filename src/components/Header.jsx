@@ -19,9 +19,9 @@ const Header = ({ title }) => {
   };
 
   return (
-    <nav className="fixed top-0 p-3 bg-green-800 w-full text-center items-center border-b justify-between">
+    <nav className="fixed top-0 p-3 bg-blue-800 w-full text-center items-center border-b justify-between">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <h1 className="text-center text-3xl font-bold">{title} 🎄</h1>
+        <h1 className="text-center text-3xl font-bold">{title} 🕎</h1>
         <div 
             className="flex flex-row items-center"
             onMouseEnter={() => handleHover(true)}

@@ -6,7 +6,7 @@ import AppContext from "./AppContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import onpamNoted from "./assets/onpamNotedXmas.png";
+import onpamNoted from "./assets/onpamNotedHanukkah.png";
 
 import Header from "./components/Header";
 import Board from "./components/Board";
@@ -18,7 +18,7 @@ import { FaRedo } from "react-icons/fa";
 import useWordle from "./hooks/useWordle";
 
 function App() {
-  const [targetWord, setTargetWord] = useState("SNOOPY");
+  const [targetWord, setTargetWord] = useState("SILKEN");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(
@@ -67,7 +67,7 @@ function App() {
   }, [handleKeyUp]);
 
   return (
-    <div className="flex flex-col bg-green-950 text-white w-full">
+    <div className="flex flex-col bg-blue-950 text-white w-full">
       <AppContext.Provider
         value={{
           currentGuess,
