@@ -4,7 +4,7 @@ import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
-import onpamGift from "../assets/onpamGift.webp";
+import buh from "../assets/buh.gif";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -40,8 +40,8 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-3xl pb-6 text-white">
-          Subscribe to <span className="text-red-600 underline"><a href="https://www.youtube.com/@silken8184" target="_blank" >Silken</a></span>'s channel
+        <p className="text-3xl pb-6 text-white flex justify-center">
+          <img src={buh}/>
         </p>
         <p className="text-6xl pb-6 text-white">
           🕯
