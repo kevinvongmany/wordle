@@ -4,7 +4,6 @@ import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
-import buh from "../assets/buh.gif";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -40,18 +39,21 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <p className="text-3xl pb-6 text-white flex justify-center">
-          <img src={buh}/>
+        <div className="flex-row justify-center space-x-4">
+        <p className="text-3xl pb-6 text-white">
+          Follow Ham on 
+          <span className="text-purple-600"><a href="https://twitch.tv/haminator100" target="_blank"> Twitch</a></span> and
+          <br/>subscribe on
+          <span className="text-red-600"><a href="https://youtu.be/@haminator1"> YouTube</a></span>!
         </p>
         <p className="text-6xl pb-6 text-white">
           🕯
         </p>
-        {/*  */}
         <p className="text-3xl pb-6 text-white">
         🕯🕯🕯🕯 <span className="text-blue-600 text-4xl">Happy Hanukkah!</span> 🕯🕯🕯🕯
-          <br/>
-            from the Australian community - Wilfred 
         </p>
+          </div>
+        {/*  */}
         <div className="flex justify-center space-x-4">
           <a href="https://bogdle.com" target="_blank">
             <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-2xl md:text-4xl hover:bg-gray-700 transition duration-300">
