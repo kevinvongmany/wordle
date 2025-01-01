@@ -20,7 +20,7 @@ function Key({ keyValue, colour, isLarge, used }) {
 
   return (
     <div 
-      className={`w-9 h-12 md:w-24 md:h-24 m-0.5 md:m-1.5 rounded grid place-items-center text-sm md:text-2xl bg-gray-300 text-red-700 font-sans cursor-pointer ${colour}`}
+      className={`w-9 h-12 md:w-24 md:h-24 m-0.5 md:m-1.5 rounded grid place-items-center text-sm md:text-2xl bg-gray-500 text-red font-sans cursor-pointer ${colour}`}
       id={isLarge ? "large" : used && "disabled"} 
       data-key={keyValue}
       onClick={handleClick}>

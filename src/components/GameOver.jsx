@@ -3,7 +3,7 @@ import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 
-import bogChamp from "../assets/bogchamp-mas.png";
+import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
 function GameOver() {
@@ -49,16 +49,10 @@ function GameOver() {
           <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/thesnazzzyrock" target="_blank">twitch.tv/thesnazzzyrock</a></span> 
           <br/>
         </p> */}
-        <p className="text-3xl pb-2 text-white">
-          🎅🏼🎄❤ <span className="text-red-600 text-4xl">Merry Bogmas!</span>{" "}
-          ❤🎄🎅🏼
-          <br />
-          from the Australian Bogmmunity
-        </p>
-        <p className="text-2xl pb-2 text-white">Thank you all for playing!</p>
+
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
-          The word was <span className="text-red-600">{targetWord}</span>
+          The word was <span className="text-violet-500">{targetWord}</span>
         </h1>
         <div className="flex justify-center space-x-4">
           <a href="https://wordpam.com" target="_blank">
