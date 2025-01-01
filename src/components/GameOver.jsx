@@ -44,7 +44,7 @@ function GameOver() {
           Follow Ham on 
           <span className="text-purple-600"><a href="https://twitch.tv/haminator100" target="_blank"> Twitch</a></span> and
           <br/>subscribe on
-          <span className="text-red-600"><a href="https://youtu.be/@haminator1"> YouTube</a></span>!
+          <span className="text-red-600"><a href="https://www.youtube.com/@haminator1" target="_blank"> YouTube</a></span>!
         </p>
         <p className="text-6xl pb-6 text-white">
           🕯
