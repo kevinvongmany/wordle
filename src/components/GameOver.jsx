@@ -40,12 +40,12 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="flex-row justify-center space-x-4">
-        <p className="text-3xl pb-6 text-white">
+        {/* <p className="text-3xl pb-6 text-white">
           Follow Ham on 
           <span className="text-purple-600"><a href="https://twitch.tv/haminator100" target="_blank"> Twitch</a></span> and
           <br/>subscribe on
           <span className="text-red-600"><a href="https://www.youtube.com/@haminator1" target="_blank"> YouTube</a></span>!
-        </p>
+        </p> */}
         <p className="text-6xl pb-6 text-white">
           🕯
         </p>
