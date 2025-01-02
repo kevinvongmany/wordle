@@ -6,6 +6,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
+import bogBricked from "../assets/bogFakebrick.gif";
+
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
   console.log(isCorrect);
@@ -40,15 +42,17 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <p className="text-3xl pb-2 text-white italic">
-          <span className="italic">"i can't play phasmo, i have phasmophobia"</span> - Sirlaurens 2024
-        </p> */}
-        {/* <p className="text-2xl pb-6 text-white">
-          Follow TheSnazzzyRock!
-          <br/>
-          <span className="text-blue-400 underline text-4xl"><a href="https://twitch.tv/thesnazzzyrock" target="_blank">twitch.tv/thesnazzzyrock</a></span> 
-          <br/>
-        </p> */}
+        <div className="mt-8">
+          <p className="text-xl md:text-3xl">
+            BOGSPLODE!!
+          </p>
+          <img
+            src={bogBricked}
+            alt="bogBricked"
+            className="w-24 md:w-36 inline-block"
+          />
+          </div>
+
 
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
