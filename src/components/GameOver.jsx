@@ -40,20 +40,12 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="flex-row justify-center space-x-4">
-        {/* <p className="text-3xl pb-6 text-white">
-          Follow Ham on 
-          <span className="text-purple-600"><a href="https://twitch.tv/haminator100" target="_blank"> Twitch</a></span> and
-          <br/>subscribe on
-          <span className="text-red-600"><a href="https://www.youtube.com/@haminator1" target="_blank"> YouTube</a></span>!
-        </p> */}
-        <p className="text-6xl pb-6 text-white">
-          🕯
-        </p>
-        <p className="text-3xl pb-6 text-white">
-        🕯🕯🕯🕯 <span className="text-blue-600 text-4xl">Happy Hanukkah!</span> 🕯🕯🕯🕯
-        </p>
+
           </div>
         {/*  */}
+        <h1 className="text-4xl md:text-5xl my-4 md:my-6">
+          The word was <span className="text-green-500">{targetWord}</span>
+        </h1>
         <div className="flex justify-center space-x-4">
           <a href="https://bogdle.com" target="_blank">
             <button className="bg-gray-800 text-white px-6 py-3 mt-8 rounded text-2xl md:text-4xl hover:bg-gray-700 transition duration-300">
