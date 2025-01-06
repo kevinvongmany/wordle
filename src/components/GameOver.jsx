@@ -43,20 +43,13 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="mt-8">
-          <p className="text-xl md:text-3xl">
-            BOGSPLODE!!
-          </p>
-          <img
-            src={bogBricked}
-            alt="bogBricked"
-            className="w-24 md:w-36 inline-block"
-          />
+          <p className="text-3xl">Follow LuckStruck9 on <span className="text-violet-500"><a href="https://twitch.tv/luckstruck9">Twitch</a></span>!</p>
           </div>
 
 
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
-          The word was <span className="text-violet-500">{targetWord}</span>
+          The word was <span className="text-blue-500">{targetWord}</span>
         </h1>
         <div className="flex justify-center space-x-4">
           <a href="https://wordpam.com" target="_blank">
