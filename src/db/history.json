@@ -3,6 +3,7 @@
         "id": 1,
         "solution": "WORDL",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [],
         "date": "2024-10-25",
         "wordpamRating": 1
@@ -11,6 +12,7 @@
         "id": 2,
         "solution": "MYNUT",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
         ],
         "date": "2024-10-28",
@@ -20,6 +22,7 @@
         "id": 3,
         "solution": "RYLEE",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "a mod!"
         ],
@@ -30,6 +33,7 @@
         "id": 4,
         "solution": "NOHIT",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "a community member",
             "a mod!"
@@ -41,6 +45,7 @@
         "id": 5,
         "solution": "RYANO",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "a mod!",
             "taylor swift fan",
@@ -53,6 +58,7 @@
         "id": 6,
         "solution": "HORMEL",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "has [P] clan tag",
             "represents ethics in Destiny 2",
@@ -65,6 +71,7 @@
         "id": 7,
         "solution": "SPOOK",
         "category": "halloween",
+        "inDictionary": true,
         "hints": [
         ],
         "date": "2024-10-31",
@@ -74,6 +81,7 @@
         "id": 8,
         "solution": "BOGJAM",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "in response to a banger",
             "whats the difference between this and ___PeanutButter? you can't PeanutButter my D up ur A"
@@ -85,6 +93,7 @@
         "id": 9,
         "solution": "BEPIS",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "first ever bogdle playtester",
             "one would agree this one is quite affordable",
@@ -97,6 +106,7 @@
         "id": 10,
         "solution": "CBGRAY",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "challenge: get all bogdle solutions in ONE stream",
             "lives with someone who might seem a bit sweaty?"
@@ -108,6 +118,7 @@
         "id": 11,
         "solution": "RIVEN",
         "category": "destiny 2",
+        "inDictionary": false,
         "hints": [
             "one of the community members are usually thinkin about this",
             "this one took a LONG time to take down"
@@ -119,6 +130,7 @@
         "id": 12,
         "solution": "MICKY",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "disney",
             "easy"
@@ -130,6 +142,7 @@
         "id": 13,
         "solution": "ARAN",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "vip",
             "the first"
@@ -141,6 +154,7 @@
         "id": 14,
         "solution": "ORBDTWO",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "destiny 2 reference?",
             "attrition perk",
@@ -153,6 +167,7 @@
         "id": 15,
         "solution": "LOLFFY",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "mamma mia!",
             "chatter from italy"
@@ -164,6 +179,7 @@
         "id": 16,
         "solution": "SORAIN",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "regular in both bog and onpam community",
             "chatter from australia"
@@ -175,6 +191,7 @@
         "id": 17,
         "solution": "NOMAN",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "regular in both bog and onpam community",
             "chatter from australia"
@@ -186,6 +203,7 @@
         "id": 18,
         "solution": "TOPADU",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "onslaught",
             "no overload rocket?",
@@ -198,6 +216,7 @@
         "id": 19,
         "solution": "GLADD",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "mod",
             "fellow streamer",
@@ -210,6 +229,7 @@
         "id": 20,
         "solution": "MARS",
         "category": "bog word/phrase",
+        "inDictionary": true,
         "hints": [
             "bog emote",
             "featured in solo atheon",
@@ -222,6 +242,7 @@
         "id": 21,
         "solution": "ASTRA",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog chatter"
         ],
@@ -232,6 +253,7 @@
         "id": 22,
         "solution": "NODPS",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "what you would say to a certain moderator after a raid",
             "two words",
@@ -244,6 +266,7 @@
         "id": 23,
         "solution": "SAMMIE",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "fellow streamer",
             "australian based",
@@ -256,6 +279,7 @@
         "id": 24,
         "solution": "WITNESS",
         "category": "bog word/phrase",
+        "inDictionary": true,
         "hints": [
             "d2 reference",
             "final boss",
@@ -268,6 +292,7 @@
         "id": 25,
         "solution": "MADDIE",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog chatter",
             "attemtps no hit challenges",
@@ -280,6 +305,7 @@
         "id": 26,
         "solution": "GUAPO",
         "category": "community member",
+        "inDictionary": true,
         "hints": [
             "fellow streamer",
             "spanish word",
@@ -292,6 +318,7 @@
         "id": 27,
         "solution": "AIMXRI",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog chatter",
             "worlds first master clearer",
@@ -304,6 +331,7 @@
         "id": 28,
         "solution": "LAURENS",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "a mod",
             "german"
@@ -315,6 +343,7 @@
         "id": 29,
         "solution": "DEWDUH",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "common bog utterance",
             "said many times in no hit shattered throne video"
@@ -326,6 +355,7 @@
         "id": 30,
         "solution": "THECUP",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "common utterance from passion members",
             "can't put it down",
@@ -338,6 +368,7 @@
         "id": 31,
         "solution": "FREELO",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "easy/mickey",
             "league of legend community term"
@@ -349,6 +380,7 @@
         "id": 32,
         "solution": "TCLORD",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog vip chatter",
             "weird tablet setup"
@@ -360,6 +392,7 @@
         "id": 33,
         "solution": "ASHEX",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog mod",
             "talented d2 speedrunner"
@@ -371,6 +404,7 @@
         "id": 34,
         "solution": "CHRISP",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog mod",
             "luda..."
@@ -382,6 +416,7 @@
         "id": 35,
         "solution": "PHASMO",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "not a d2 reference",
             "has orbs",
@@ -394,6 +429,7 @@
         "id": 36,
         "solution": "VANDAL",
         "category": "community member",
+        "inDictionary": true,
         "hints": [
             "bog chatter",
             "d2 combatant",
@@ -406,6 +442,7 @@
         "id": 37,
         "solution": "EPSILON",
         "category": "community member",
+        "inDictionary": true,
         "hints": [
             "bog chatter",
             "greek letter"
@@ -417,6 +454,7 @@
         "id": 38,
         "solution": "STRIDER",
         "category": "community member",
+        "inDictionary": true,
         "hints": [
             "a mod",
             "abilities only ghosts of the deep attempts"
@@ -428,6 +466,7 @@
         "id": 39,
         "solution": "YOSHI",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog chatter",
             "featured in nintendo games",
@@ -440,6 +479,7 @@
         "id": 40,
         "solution": "SNAZZZY",
         "category": "community member",
+        "inDictionary": false,
         "hints": [
             "bog mod",
             "passion member",
@@ -452,17 +492,19 @@
         "id": 41,
         "solution": "BOGMAS",
         "category": "bog word/phrase",
+        "inDictionary": false,
         "hints": [
             "emote",
             "christmas"
         ],
         "date": "2024-12-25",
-        "wordpamRating": 4
+        "wordpamRating": 3
     },
     {
         "id": 42,
         "solution": "STARE",
         "category": "bog word/phrase",
+        "inDictionary": true,
         "hints": [
             "look at for a duration",
             "bog's first word usual attempt"
@@ -474,6 +516,7 @@
         "id": 43,
         "solution": "BRICKED",
         "category": "bog word/phrase",
+        "inDictionary": true,
         "hints": [
             "bog emote",
             "word is in past tense",
@@ -486,6 +529,7 @@
         "id": 44,
         "solution": "LUCK",
         "category": "community member",
+        "inDictionary": true,
         "hints": [
             "bog mod",
             "traveller's chosen",
