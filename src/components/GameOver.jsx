@@ -40,7 +40,7 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="flex-row justify-center space-x-4">
-
+          <p className="text-3xl">Follow mitch_d2 on <a href="https://www.twitch.tv/mitch_d2" target="_blank">twitch</a>!</p>
           </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
