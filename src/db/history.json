@@ -537,5 +537,19 @@
         ],
         "date": "2025-01-07",
         "wordpamRating": 5
+    },
+    {
+        "id": 45,
+        "solution": "CUPHEAD",
+        "category": "bog word/phrase",
+        "inDictionary": false,
+        "hints": [
+            "not a d2 reference",
+            "game from 2017",
+            "mugman's brother"
+        ],
+        "date": "2025-01-14",
+        "wordpamRating": 2
     }
+    
 ]

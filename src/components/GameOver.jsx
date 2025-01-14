@@ -42,9 +42,9 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <p className="text-3xl">Follow LuckStruck9 on <span className="text-violet-500"><a href="https://twitch.tv/luckstruck9">Twitch</a></span>!</p>
-          </div>
+          </div> */}
 
 
         {/*  */}
