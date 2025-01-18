@@ -550,6 +550,18 @@
         ],
         "date": "2025-01-14",
         "wordpamRating": 2
-    }
-    
+    },
+    {
+        "id": 46,
+        "solution": "BOGHI",
+        "category": "bog word/phrase",
+        "inDictionary": false,
+        "hints": [
+            "what the dog doin?",
+            "greeting",
+            "emote"
+        ],
+        "date": "2025-01-18",
+        "wordpamRating": 4
+    }    
 ]
