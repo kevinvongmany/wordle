@@ -563,5 +563,18 @@
         ],
         "date": "2025-01-18",
         "wordpamRating": 4
+    },
+    {
+        "id": 47,
+        "solution": "GSUPPS",
+        "category": "bog word/phrase",
+        "inDictionary": false,
+        "hints": [
+            "raw meat",
+            "checkout code",
+            "sponsor of bog"
+        ],
+        "date": "2025-01-22",
+        "wordpamRating": 3
     }    
 ]

@@ -6,7 +6,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
-import bogHi from "../assets/boghi.webp";
+// import bogHi from "../assets/boghi.webp";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -43,8 +43,8 @@ function GameOver() {
 
         {/* Custom message */}
         <div className="mt-8">
-          <img src={bogHi} alt="bogHi" className="w-24 md:w-36 inline-block" />
-          {/* <p className="text-3xl">Follow LuckStruck9 on <span className="text-violet-500"><a href="https://twitch.tv/luckstruck9">Twitch</a></span>!</p> */}
+          {/* <img src={bogHi} alt="bogHi" className="w-24 md:w-36 inline-block" /> */}
+          <p className="text-3xl">Checkout code: BOG @ <span className="text-violet-500"><a href="https://gamersupps.gg/?ref=BOG">GAMER SUPPS</a></span>!</p>
           </div>
 
 
