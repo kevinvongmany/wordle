@@ -4,6 +4,7 @@ import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 import onpamHappy from "../assets/onpamHappy.webp";
 import onpamSad from "../assets/onpamSad.webp";
+import onpaw from "../assets/onpaw.png";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -39,9 +40,10 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        {/* <div className="flex-row justify-center space-x-4">
-          <p className="text-3xl">Follow mitch_d2 on <a href="https://www.twitch.tv/mitch_d2" target="_blank"><span className="text-violet-600">Twitch</span></a>!</p>
-          </div> */}
+        <div className="flex-row justify-center space-x-4">
+          {/* <p className="text-3xl">Follow mitch_d2 on <a href="https://www.twitch.tv/mitch_d2" target="_blank"><span className="text-violet-600">Twitch</span></a>!</p> */}
+          <img src={onpaw} alt="Onpaw" className="inline-block" />
+          </div>
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was <span className="text-green-500">{targetWord}</span>
