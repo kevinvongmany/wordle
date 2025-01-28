@@ -576,5 +576,19 @@
         ],
         "date": "2025-01-22",
         "wordpamRating": 3
-    }    
+    },
+    {
+        
+        "id": 48,
+        "solution": "TANIKS",
+        "category": "bog word/phrase",
+        "inDictionary": false,
+        "hints": [
+            "destiny 2 reference",
+            "raid boss",
+            "hardest solo of the game"
+        ],
+        "date": "2025-01-29",
+        "wordpamRating": 3
+    }
 ]

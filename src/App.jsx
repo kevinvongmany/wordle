@@ -19,7 +19,7 @@ import useWordle from "./hooks/useWordle";
 
 function App() {
   
-  const [targetWord, setTargetWord] = useState("GSUPPS");
+  const [targetWord, setTargetWord] = useState("TANIKS");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(
@@ -68,7 +68,7 @@ function App() {
   }, [handleKeyUp]);
 
   return (
-    <div className="flex flex-col bg-gray-900 text-white w-full">
+    <div className="flex flex-col bg-red-900 text-white w-full">
       <AppContext.Provider
         value={{
           currentGuess,
@@ -97,7 +97,7 @@ function App() {
           <div className="flex flex-col items-center mb-4">
             <Board />
               <button 
-              className="bg-red-800 text-white p-2 md:p-4 md:mt-4 rounded"
+              className="bg-green-800 text-white p-2 md:p-4 md:mt-4 rounded"
               onClick={() => {
                 window.location.reload();
               }}

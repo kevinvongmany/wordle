@@ -19,9 +19,9 @@ const Header = ({ title }) => {
   };
 
   return (
-    <nav className="fixed top-0 p-3 bg-gray-800 w-full text-center items-center border-b justify-between">
+    <nav className="fixed top-0 p-3 bg-red-900 w-full text-center items-center border-b justify-between">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <h1 className="text-center text-3xl font-bold">{title}</h1>
+        <h1 className="text-center text-3xl font-bold">{title} 🐍</h1>
         <div 
             className="flex flex-row items-center"
             onMouseEnter={() => handleHover(true)}
@@ -32,7 +32,7 @@ const Header = ({ title }) => {
             onClick={handleToggleHardMode}
             className={
                 hardMode
-                ? "bg-red-900 text-white p-1 md:p-2 rounded"
+                ? "bg-red-950 text-white p-1 md:p-2 rounded"
                 : "bg-gray-600 text-white p-1 md:p-2 rounded opacity-40"
             }
             >

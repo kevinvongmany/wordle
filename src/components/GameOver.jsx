@@ -3,7 +3,7 @@ import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 
-import bogChamp from "../assets/bogChamp.webp";
+import bogChamp from "../assets/bogChampNY.png";
 import bogSad from "../assets/bogSad.webp";
 
 // import bogHi from "../assets/boghi.webp";
@@ -44,13 +44,14 @@ function GameOver() {
         {/* Custom message */}
         <div className="mt-8">
           {/* <img src={bogHi} alt="bogHi" className="w-24 md:w-36 inline-block" /> */}
-          <p className="text-3xl">Checkout code: BOG @ <span className="text-violet-500"><a href="https://gamersupps.gg/?ref=BOG">GAMER SUPPS</a></span>!</p>
+          <p className="text-5xl text-red-600">Happy Lunar New Year!</p>
+          <p className="text-5xl text-red-600 mt-3">🐍🐍🐍</p>
           </div>
 
 
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
-          The word was <span className="text-blue-500">{targetWord}</span>
+          The word was <span className="text-red-600">{targetWord}</span>
         </h1>
         <div className="flex justify-center space-x-4">
           <a href="https://wordpam.com" target="_blank">
