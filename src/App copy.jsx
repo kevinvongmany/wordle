@@ -6,7 +6,7 @@ import AppContext from "./AppContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import onpamNoted from "./assets/snoopyNY.png";
+import onpamNoted from "./assets/onpamNoted.webp";
 
 import Header from "./components/Header";
 import Board from "./components/Board";
@@ -18,7 +18,7 @@ import { FaRedo } from "react-icons/fa";
 import useWordle from "./hooks/useWordle";
 
 function App() {
-  const [targetWord, setTargetWord] = useState("ONPAML");
+  const [targetWord, setTargetWord] = useState("ONPAW");
   const solution = localStorage.getItem("solution");
   const [newGame, setNewGame] = useState(solution !== targetWord);
   const [gameComplete, setGameComplete] = useState(
@@ -96,7 +96,7 @@ function App() {
           <div className="flex flex-col items-center mb-4">
             <Board />
             <button
-              className="bg-green-800 text-white p-2 md:p-4 md:mt-4 rounded"
+              className="bg-red-800 text-white p-2 md:p-4 md:mt-4 rounded"
               onClick={() => {
                 window.location.reload();
               }}
