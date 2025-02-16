@@ -3,7 +3,7 @@ import AppContext from "../AppContext";
 import Results from "./Results";
 import { IoIosCloseCircle } from "react-icons/io";
 
-import bogChamp from "../assets/bogChampNY.png";
+import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
 // import bogHi from "../assets/boghi.webp";
@@ -42,11 +42,6 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="mt-8">
-          {/* <img src={bogHi} alt="bogHi" className="w-24 md:w-36 inline-block" /> */}
-          <p className="text-5xl text-red-600">Happy Lunar New Year!</p>
-          <p className="text-5xl text-red-600 mt-3">🐍🐍🐍</p>
-          </div>
 
 
         {/*  */}
