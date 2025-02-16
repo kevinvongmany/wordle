@@ -590,5 +590,19 @@
         ],
         "date": "2025-01-29",
         "wordpamRating": 3
+    },
+    {
+        
+        "id": 49,
+        "solution": "WAFFLES",
+        "category": "community member",
+        "inDictionary": true,
+        "hints": [
+            "streamer/content creator",
+            "returned to d2 after forsaken",
+            "datto of COD zombies"
+        ],
+        "date": "2025-02-16",
+        "wordpamRating": 4
     }
 ]
