@@ -6,7 +6,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import bogChamp from "../assets/bogChamp.webp";
 import bogSad from "../assets/bogSad.webp";
 
-// import bogHi from "../assets/boghi.webp";
+import bogCaught from "../assets/bogCAUGHT.png";
 
 function GameOver() {
   const { targetWord, turn, isCorrect, setShowModal } = useContext(AppContext);
@@ -42,7 +42,13 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-
+        <div className="flex justify-center">
+          <img
+            src={bogCaught}
+            alt="bogCaught"
+            className="w-24 md:w-36 inline-block"
+          />
+        </div>
 
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">

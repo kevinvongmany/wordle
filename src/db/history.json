@@ -604,5 +604,19 @@
         ],
         "date": "2025-02-16",
         "wordpamRating": 4
+    },
+    {
+        
+        "id": 50,
+        "solution": "CAUGHT",
+        "category": "bog word/phrase",
+        "inDictionary": true,
+        "hints": [
+            "past tense word",
+            "what happens when someone catches you",
+            "bog emote"
+        ],
+        "date": "2025-02-19",
+        "wordpamRating": 2
     }
 ]
