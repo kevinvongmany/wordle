@@ -42,13 +42,13 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <img
             src={bogCaught}
             alt="bogCaught"
             className="w-24 md:w-36 inline-block"
           />
-        </div>
+        </div> */}
 
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">

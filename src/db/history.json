@@ -618,5 +618,19 @@
         ],
         "date": "2025-02-19",
         "wordpamRating": 2
+    },
+    {
+        
+        "id": 51,
+        "solution": "VIK",
+        "category": "community member",
+        "inDictionary": true,
+        "hints": [
+            "d2 player",
+            "mod in bog chat",
+            "boundless"
+        ],
+        "date": "2025-02-25",
+        "wordpamRating": 3
     }
 ]
