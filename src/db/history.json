@@ -632,5 +632,19 @@
         ],
         "date": "2025-02-25",
         "wordpamRating": 3
+    },
+    {
+        
+        "id": 52,
+        "solution": "GAB",
+        "category": "community member",
+        "inDictionary": true,
+        "hints": [
+            "bog chatter (not mod or vip)",
+            "dairy product association",
+            "pressed curds"
+        ],
+        "date": "2025-02-28",
+        "wordpamRating": 1
     }
 ]
