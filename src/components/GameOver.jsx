@@ -42,16 +42,16 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center"> */}
           {/* <img
             src={bogCaught}
             alt="bogCaught"
             className="w-24 md:w-36 inline-block"
           /> */}
-          <h2 className="text-xl md:text-3xl mb-6">
+          {/* <h2 className="text-xl md:text-3xl mb-6">
             BOG <span className="text-blue-500"><a href="https://www.youtube.com/watch?v=EIIJuXIX-gA&t=2s" target="_blank">SOLO TWO PHASED ECTHAR</a></span>!!
             </h2>
-        </div>
+        </div> */}
 
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
