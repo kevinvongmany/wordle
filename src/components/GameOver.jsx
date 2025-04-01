@@ -40,15 +40,7 @@ function GameOver() {
         <Results />
 
         {/* Custom message */}
-        <div className="flex-row justify-center space-x-4">
-          {/* <p className="text-3xl">Follow mitch_d2 on <a href="https://www.twitch.tv/mitch_d2" target="_blank"><span className="text-violet-600">Twitch</span></a>!</p> */}
-          <img src={onpamL} alt="onpamL" className="inline-block" />
-          </div>
-          <div className="mt-8">
-          {/* <img src={bogHi} alt="bogHi" className="w-24 md:w-36 inline-block" /> */}
-          <p className="text-5xl text-red-600">Happy Lunar New Year!</p>
-          <p className="text-5xl text-red-600 mt-3">🐍🐍🐍</p>
-          </div>
+
         {/*  */}
         <h1 className="text-4xl md:text-5xl my-4 md:my-6">
           The word was <span className="text-red-500">{targetWord}</span>
